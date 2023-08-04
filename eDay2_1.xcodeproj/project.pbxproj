@@ -35,9 +35,6 @@
 		FB52B62027952579004EF878 /* DisplayImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52B61F27952579004EF878 /* DisplayImage.swift */; };
 		FB52B62227952594004EF878 /* ImageSingleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52B62127952594004EF878 /* ImageSingleView.swift */; };
 		FB52B6252795261E004EF878 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52B6242795261E004EF878 /* Image.swift */; };
-		FB52B6282795265B004EF878 /* DocuData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52B6272795265B004EF878 /* DocuData+CoreDataClass.swift */; };
-		FB52B62A27952667004EF878 /* ImageData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52B62927952666004EF878 /* ImageData+CoreDataClass.swift */; };
-		FB52B62C2795266A004EF878 /* ImageData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52B62B2795266A004EF878 /* ImageData+CoreDataProperties.swift */; };
 		FB52B6312795421E004EF878 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52B6302795421E004EF878 /* LaunchView.swift */; };
 		FB52B6352796886C004EF878 /* long.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB52B6342796886C004EF878 /* long.jpg */; };
 		FB52B63B27969673004EF878 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB52B63A27969673004EF878 /* Assets.xcassets */; };
@@ -46,16 +43,19 @@
 		FB59022F279E592700711C70 /* TipsConventional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB59022E279E592700711C70 /* TipsConventional.swift */; };
 		FB590231279E5C7200711C70 /* TipsConEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB590230279E5C7200711C70 /* TipsConEditView.swift */; };
 		FB590235279E698800711C70 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB590234279E698800711C70 /* ToggleView.swift */; };
-		FB59024A279E930B00711C70 /* Malela.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB590241279E930B00711C70 /* Malela.ttf */; };
 		FB59024B279E930B00711C70 /* Tanya Hati.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB590242279E930B00711C70 /* Tanya Hati.ttf */; };
-		FB59024C279E930B00711C70 /* Amy-Sauly.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB590243279E930B00711C70 /* Amy-Sauly.ttf */; };
 		FB59024D279E930B00711C70 /* Rattfiny-Script.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB590244279E930B00711C70 /* Rattfiny-Script.ttf */; };
-		FB59024E279E930B00711C70 /* Santtuy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB590245279E930B00711C70 /* Santtuy.ttf */; };
-		FB59024F279E930B00711C70 /* LoveSaturnDemoRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB590246279E930B00711C70 /* LoveSaturnDemoRegular.ttf */; };
-		FB590250279E930B00711C70 /* Rosther.otf in Resources */ = {isa = PBXBuildFile; fileRef = FB590247279E930B00711C70 /* Rosther.otf */; };
 		FB590251279E930B00711C70 /* Toniya-Smith.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB590248279E930B00711C70 /* Toniya-Smith.ttf */; };
-		FB590252279E930B00711C70 /* Rattfiny Script.otf in Resources */ = {isa = PBXBuildFile; fileRef = FB590249279E930B00711C70 /* Rattfiny Script.otf */; };
 		FB590254279E940500711C70 /* Creattion Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = FB590253279E940400711C70 /* Creattion Demo.otf */; };
+		FBF538182A7CDD7B00313139 /* Malela.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBF538122A7CDD7B00313139 /* Malela.ttf */; };
+		FBF538192A7CDD7B00313139 /* Amy-Sauly.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBF538132A7CDD7B00313139 /* Amy-Sauly.ttf */; };
+		FBF5381A2A7CDD7B00313139 /* Rosther.otf in Resources */ = {isa = PBXBuildFile; fileRef = FBF538142A7CDD7B00313139 /* Rosther.otf */; };
+		FBF5381B2A7CDD7B00313139 /* LoveSaturnDemoRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBF538152A7CDD7B00313139 /* LoveSaturnDemoRegular.ttf */; };
+		FBF5381C2A7CDD7B00313139 /* Santtuy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBF538162A7CDD7B00313139 /* Santtuy.ttf */; };
+		FBF5381D2A7CDD7B00313139 /* Rattfiny Script.otf in Resources */ = {isa = PBXBuildFile; fileRef = FBF538172A7CDD7B00313139 /* Rattfiny Script.otf */; };
+		FBF538212A7CDDC500313139 /* ImageData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF5381E2A7CDDC400313139 /* ImageData+CoreDataProperties.swift */; };
+		FBF538222A7CDDC500313139 /* DocuData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF5381F2A7CDDC400313139 /* DocuData+CoreDataClass.swift */; };
+		FBF538232A7CDDC500313139 /* ImageData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF538202A7CDDC500313139 /* ImageData+CoreDataClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,9 +89,6 @@
 		FB52B62127952594004EF878 /* ImageSingleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSingleView.swift; sourceTree = "<group>"; };
 		FB52B623279525D8004EF878 /* eDay2-1-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "eDay2-1-Info.plist"; sourceTree = SOURCE_ROOT; };
 		FB52B6242795261E004EF878 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		FB52B6272795265B004EF878 /* DocuData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DocuData+CoreDataClass.swift"; sourceTree = "<group>"; };
-		FB52B62927952666004EF878 /* ImageData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageData+CoreDataClass.swift"; sourceTree = "<group>"; };
-		FB52B62B2795266A004EF878 /* ImageData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FB52B6302795421E004EF878 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		FB52B6342796886C004EF878 /* long.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = long.jpg; sourceTree = "<group>"; };
 		FB52B63A27969673004EF878 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,16 +97,19 @@
 		FB59022E279E592700711C70 /* TipsConventional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsConventional.swift; sourceTree = "<group>"; };
 		FB590230279E5C7200711C70 /* TipsConEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsConEditView.swift; sourceTree = "<group>"; };
 		FB590234279E698800711C70 /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
-		FB590241279E930B00711C70 /* Malela.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Malela.ttf; path = "../../../../其他/字体/Malela.ttf"; sourceTree = "<group>"; };
 		FB590242279E930B00711C70 /* Tanya Hati.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tanya Hati.ttf"; sourceTree = "<group>"; };
-		FB590243279E930B00711C70 /* Amy-Sauly.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Amy-Sauly.ttf"; path = "../../../../其他/字体/Amy-Sauly.ttf"; sourceTree = "<group>"; };
 		FB590244279E930B00711C70 /* Rattfiny-Script.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rattfiny-Script.ttf"; sourceTree = "<group>"; };
-		FB590245279E930B00711C70 /* Santtuy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Santtuy.ttf; path = "../../../../其他/字体/Santtuy.ttf"; sourceTree = "<group>"; };
-		FB590246279E930B00711C70 /* LoveSaturnDemoRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = LoveSaturnDemoRegular.ttf; path = "../../../../其他/字体/LoveSaturnDemoRegular.ttf"; sourceTree = "<group>"; };
-		FB590247279E930B00711C70 /* Rosther.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Rosther.otf; path = "../../../../其他/字体/Rosther.otf"; sourceTree = "<group>"; };
 		FB590248279E930B00711C70 /* Toniya-Smith.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Toniya-Smith.ttf"; sourceTree = "<group>"; };
-		FB590249279E930B00711C70 /* Rattfiny Script.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rattfiny Script.otf"; path = "../../../../其他/字体/Rattfiny Script.otf"; sourceTree = "<group>"; };
 		FB590253279E940400711C70 /* Creattion Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Creattion Demo.otf"; sourceTree = "<group>"; };
+		FBF538122A7CDD7B00313139 /* Malela.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Malela.ttf; sourceTree = "<group>"; };
+		FBF538132A7CDD7B00313139 /* Amy-Sauly.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amy-Sauly.ttf"; sourceTree = "<group>"; };
+		FBF538142A7CDD7B00313139 /* Rosther.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rosther.otf; sourceTree = "<group>"; };
+		FBF538152A7CDD7B00313139 /* LoveSaturnDemoRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LoveSaturnDemoRegular.ttf; sourceTree = "<group>"; };
+		FBF538162A7CDD7B00313139 /* Santtuy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Santtuy.ttf; sourceTree = "<group>"; };
+		FBF538172A7CDD7B00313139 /* Rattfiny Script.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rattfiny Script.otf"; sourceTree = "<group>"; };
+		FBF5381E2A7CDDC400313139 /* ImageData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ImageData+CoreDataProperties.swift"; path = "eDay2_1/CoreData/ImageData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FBF5381F2A7CDDC400313139 /* DocuData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DocuData+CoreDataClass.swift"; path = "eDay2_1/CoreData/DocuData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FBF538202A7CDDC500313139 /* ImageData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ImageData+CoreDataClass.swift"; path = "eDay2_1/CoreData/ImageData+CoreDataClass.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +126,9 @@
 		FB52B5CE27952250004EF878 = {
 			isa = PBXGroup;
 			children = (
+				FBF5381F2A7CDDC400313139 /* DocuData+CoreDataClass.swift */,
+				FBF538202A7CDDC500313139 /* ImageData+CoreDataClass.swift */,
+				FBF5381E2A7CDDC400313139 /* ImageData+CoreDataProperties.swift */,
 				FB52B5D927952250004EF878 /* eDay2_1 */,
 				FB52B5D827952250004EF878 /* Products */,
 			);
@@ -144,7 +147,6 @@
 			children = (
 				FB590236279E8D9900711C70 /* Resources */,
 				FB52B5DA27952250004EF878 /* eDay2_1App.swift */,
-				FB52B6262795265B004EF878 /* CoreData */,
 				FB52B612279524E9004EF878 /* Models */,
 				FB52B5F8279523EF004EF878 /* Modifiers */,
 				FB52B5EE2795236E004EF878 /* Classes */,
@@ -249,17 +251,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		FB52B6262795265B004EF878 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				FB52B62927952666004EF878 /* ImageData+CoreDataClass.swift */,
-				FB52B62B2795266A004EF878 /* ImageData+CoreDataProperties.swift */,
-				FB52B6272795265B004EF878 /* DocuData+CoreDataClass.swift */,
-			);
-			name = CoreData;
-			path = ../../eDay5/CoreData;
-			sourceTree = "<group>";
-		};
 		FB52B62F27954207004EF878 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,13 +270,13 @@
 		FB590237279E8DA800711C70 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				FB590243279E930B00711C70 /* Amy-Sauly.ttf */,
-				FB590246279E930B00711C70 /* LoveSaturnDemoRegular.ttf */,
-				FB590241279E930B00711C70 /* Malela.ttf */,
-				FB590249279E930B00711C70 /* Rattfiny Script.otf */,
+				FBF538132A7CDD7B00313139 /* Amy-Sauly.ttf */,
+				FBF538152A7CDD7B00313139 /* LoveSaturnDemoRegular.ttf */,
+				FBF538122A7CDD7B00313139 /* Malela.ttf */,
+				FBF538172A7CDD7B00313139 /* Rattfiny Script.otf */,
+				FBF538142A7CDD7B00313139 /* Rosther.otf */,
+				FBF538162A7CDD7B00313139 /* Santtuy.ttf */,
 				FB590244279E930B00711C70 /* Rattfiny-Script.ttf */,
-				FB590247279E930B00711C70 /* Rosther.otf */,
-				FB590245279E930B00711C70 /* Santtuy.ttf */,
 				FB590253279E940400711C70 /* Creattion Demo.otf */,
 				FB590242279E930B00711C70 /* Tanya Hati.ttf */,
 				FB590248279E930B00711C70 /* Toniya-Smith.ttf */,
@@ -351,19 +342,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBF538182A7CDD7B00313139 /* Malela.ttf in Resources */,
+				FBF538192A7CDD7B00313139 /* Amy-Sauly.ttf in Resources */,
+				FBF5381A2A7CDD7B00313139 /* Rosther.otf in Resources */,
+				FBF5381B2A7CDD7B00313139 /* LoveSaturnDemoRegular.ttf in Resources */,
+				FBF5381C2A7CDD7B00313139 /* Santtuy.ttf in Resources */,
+				FBF5381D2A7CDD7B00313139 /* Rattfiny Script.otf in Resources */,
 				FB52B5E227952252004EF878 /* Preview Assets.xcassets in Resources */,
 				FB52B6352796886C004EF878 /* long.jpg in Resources */,
 				FB59024D279E930B00711C70 /* Rattfiny-Script.ttf in Resources */,
 				FB590254279E940500711C70 /* Creattion Demo.otf in Resources */,
-				FB590250279E930B00711C70 /* Rosther.otf in Resources */,
 				FB59024B279E930B00711C70 /* Tanya Hati.ttf in Resources */,
-				FB59024C279E930B00711C70 /* Amy-Sauly.ttf in Resources */,
-				FB59024A279E930B00711C70 /* Malela.ttf in Resources */,
 				FB52B63B27969673004EF878 /* Assets.xcassets in Resources */,
-				FB590252279E930B00711C70 /* Rattfiny Script.otf in Resources */,
-				FB59024E279E930B00711C70 /* Santtuy.ttf in Resources */,
 				FB590251279E930B00711C70 /* Toniya-Smith.ttf in Resources */,
-				FB59024F279E930B00711C70 /* LoveSaturnDemoRegular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,9 +365,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBF538212A7CDDC500313139 /* ImageData+CoreDataProperties.swift in Sources */,
+				FBF538222A7CDDC500313139 /* DocuData+CoreDataClass.swift in Sources */,
+				FBF538232A7CDDC500313139 /* ImageData+CoreDataClass.swift in Sources */,
 				FB52B6002795246B004EF878 /* Scandata.swift in Sources */,
 				FB59022F279E592700711C70 /* TipsConventional.swift in Sources */,
-				FB52B62A27952667004EF878 /* ImageData+CoreDataClass.swift in Sources */,
 				FB52B60D279524B6004EF878 /* TextRecognize.swift in Sources */,
 				FB590231279E5C7200711C70 /* TipsConEditView.swift in Sources */,
 				FB52B62027952579004EF878 /* DisplayImage.swift in Sources */,
@@ -386,8 +379,6 @@
 				FB52B609279524A4004EF878 /* ScannerView.swift in Sources */,
 				FB52B5DD27952250004EF878 /* ContentView.swift in Sources */,
 				FB52B6052795248E004EF878 /* ToolsView.swift in Sources */,
-				FB52B62C2795266A004EF878 /* ImageData+CoreDataProperties.swift in Sources */,
-				FB52B6282795265B004EF878 /* DocuData+CoreDataClass.swift in Sources */,
 				FB52B5FC2795243F004EF878 /* Tips.swift in Sources */,
 				FB52B5F227952390004EF878 /* MenuView.swift in Sources */,
 				FB590235279E698800711C70 /* ToggleView.swift in Sources */,
