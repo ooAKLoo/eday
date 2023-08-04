@@ -117,13 +117,6 @@ struct ConToggleView: View {
             Capsule()
                 .fill(Color(#colorLiteral(red: 0.4222230911, green: 0.5350257158, blue: 0.9202566743, alpha: 0.8470588235)))
                 .frame(width: 100, height: 30)
-//                .border(Color(#colorLiteral(red: 0.4222230911, green: 0.5350257158, blue: 0.9202566743, alpha: 0.8470588235)))
-//                .cornerRadius(10)
-            
-//                .foregroundColor(Color(#colorLiteral(red: 0.4222230911, green: 0.5350257158, blue: 0.9202566743, alpha: 0.8470588235)))
-            
-            
-            
             HStack {
                 
                 if isHidden{
@@ -150,7 +143,6 @@ struct ConToggleView: View {
                 
             }.frame(width: 100, height: 30)
                 .animation(.spring(response: 0.5, dampingFraction: 0.5, blendDuration: 0))
-            
             
         }
     }

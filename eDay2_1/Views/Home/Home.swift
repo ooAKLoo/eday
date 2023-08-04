@@ -14,6 +14,7 @@ struct Home: View {
     @State var showToolsContent = false
     @State var showToolsSecurityContent = false
     @State var showTipsConventional = false
+    @State var showAudioNote = false
     @State var backColor = Color(.white)
     
     @ObservedObject var ConData :ConTips = initConData()
@@ -22,7 +23,7 @@ struct Home: View {
     var body: some View {
         ZStack {
            
-            HomeView(showProfile:$showProfile, showContent: $showTipsContent,showToolsContent: $showToolsContent, showToolsSecurityContent: $showToolsSecurityContent ,showTipsConventional: $showTipsConventional, backColor: $backColor)
+            HomeView(showProfile:$showProfile, showContent: $showTipsContent,showToolsContent: $showToolsContent, showToolsSecurityContent: $showToolsSecurityContent ,showTipsConventional: $showTipsConventional,showAudioNote: $showAudioNote, backColor: $backColor)
                 .environmentObject(ConData)
                 .environmentObject(authenticationManager)
 //                .environmentObject(ConData)
@@ -39,17 +40,25 @@ struct Home: View {
                 }
             if showTipsConventional{
                 Color.white.edgesIgnoringSafeArea(.all)
-            TipsConventionalView(backColor: $backColor, showContent: $showTipsConventional)
+                TipsConventionalView(backColor: $backColor, showContent: $showTipsConventional)
                     .environmentObject(ConData)
-                .transition(.move(edge: .bottom))
-                .animation(.spring(response: 0.1, dampingFraction: 0.9, blendDuration: 1))
+                    .transition(.move(edge: .bottom))
+                    .animation(.spring(response: 0.1, dampingFraction: 0.9, blendDuration: 1))
             }
+
             if showToolsContent {
                     Color.white.edgesIgnoringSafeArea(.all)
                 ToolsView(backColor: $backColor, showContent: $showToolsContent)
                     .transition(.move(edge: .bottom))
                     .animation(.spring(response: 0.1, dampingFraction: 0.9, blendDuration: 1))
                 }
+            if showAudioNote {
+                Color.white.edgesIgnoringSafeArea(.all)
+                SSTView(backColor: $backColor, showSSTView: $showAudioNote) // 如果 SSTView 没有任何参数，这里就直接使用 ()
+                .transition(.move(edge: .bottom))
+                .animation(.spring(response: 0.1, dampingFraction: 0.9, blendDuration: 1))
+            }
+
             if authenticationManager.isAuthenticated{
                 Color.white.edgesIgnoringSafeArea(.all)
             ToolsSecurityView(backColor: $backColor)

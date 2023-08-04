@@ -25,10 +25,12 @@
 //    print("out=",output)
     return (finish,tol,output)
 }
-  struct TipsView: View {
+
+struct TipsView: View {
     @Binding var backColor:Color
     @Binding var showContent: Bool
     @State var showAdd = false
+    @State var showOptions = false
     
     
     @State var showScannerSheet = false
@@ -37,75 +39,140 @@
     
     @ObservedObject var MedData :MedTips = MedTips(data: initMedData().2,finished: initMedData().0,tolcount: initMedData().1)
     
-    var body: some View {
-        ZStack {
-            
-            backColor
-            
-            VStack {
-     
-                HStack(spacing:120) {
-                    Button(action:{
-                        self.showScannerSheet=true
-                    }){
-                    Image(systemName: "camera")
-                        .frame(width: 36,height:36)
-                        .foregroundColor(.white)
-                        .background(Color.black)
-                        .clipShape(Circle())
-                    }
-                    .sheet(isPresented:$showScannerSheet){
-                            self.makeScannerView()
-                    }
-                    Button(action: {self.showAdd.toggle()}){
-                    Image(systemName: "plus")
-                        .frame(width: 36,height:36)
-                        .foregroundColor(.white)
-                        .background(Color.black)
-                        .clipShape(Circle())
-                    }
-                        .sheet(isPresented: $showAdd){
-                            MedTipsEditView(backColor: $backColor)
-                                .environmentObject(self.MedData)
-                        }
-                    Image(systemName: "xmark")
-                        .frame(width:36,height:36)
-                        .foregroundColor(.white)
-                        .background(Color.black)
-                    .clipShape(Circle())
-                    .onTapGesture {
-                        self.showContent=false
-//                        self.toggleShowContent()
-//                        print("X=",MedData.MedList[1].isChecked)
-                    }
-                }
-                Spacer()
+    func fetchDataFromServer() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            let jsonData = """
+            {
+                "id": 0,
+                "name": "测试药物",
+                "remain": 4,
+                "time": ["2023-07-29T12:00:00+00:00", "2023-07-29T14:00:00+00:00", "2023-07-29T16:00:00+00:00", "2023-07-29T18:00:00+00:00"],
+                "dp1": 1,
+                "dp2": 1,
+                "dp3": 1,
+                "dp4": 1,
+                "frequ": 0,
+                "isChecked": false,
+                "deleted": false,
+                "timeNum": 4
             }
-            .padding(.top,40)
-            .offset(x:0,y:16)
-            
-            ScrollView(.vertical,showsIndicators: false) {
-                VStack {
-                        ForEach(self.MedData.MedList) { item in
-                            if !item.deleted{
-                            MedCardView(index: item.id, backColor: $backColor)
-                                .environmentObject(self.MedData)
-                            .padding()
-    //                    .frame(width: 275, height: 275)
-                            }
-                    }
-                }
+            """.data(using: .utf8)!
+
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
+            do {
+                let medication = try decoder.decode(Medication.self, from: jsonData)
+                self.MedData.add(data: medication) // 添加这一行
+                print(medication)
+            } catch {
+                print("Error decoding JSON: \(error)")
             }
-            .padding(.top,110)
-            .frame(width: screen.width)
-            
-            
         }
-        .edgesIgnoringSafeArea(.all)
     }
-//    func toggleShowContent(){
-//        self.showContent=false
-//    }
+
+
+    
+    
+    var body: some View {
+           ZStack {
+               backColor
+               
+               VStack {
+                   
+                   HStack {
+                       VStack {
+                           Button(action: {
+                               self.showOptions.toggle()
+                           }) {
+                               Image(systemName: "plus")
+                                   .frame(width: 36,height:36)
+                                   .foregroundColor(.white)
+                                   .background(Color.black)
+                                   .clipShape(Circle())
+                           }
+                           .sheet(isPresented: $showAdd){
+                               MedTipsEditView(backColor: $backColor)
+                                   .environmentObject(self.MedData)
+                           }
+                       }
+                       .padding(.top,50)
+                       .padding(.leading,30)
+
+                       if self.showOptions {
+                           HStack {
+                               Button(action:{
+                                   self.showScannerSheet = true
+                                   self.showOptions = false
+                               }) {
+                                   Image(systemName: "camera")
+                                       .frame(width: 36,height:36)
+                                       .foregroundColor(.white)
+                                       .background(Color.black)
+                                       .clipShape(Circle())
+                               }
+                               .sheet(isPresented:$showScannerSheet){
+                                   self.makeScannerView()
+                               }
+                               Button(action:{
+                                   self.showAdd = true
+                                   self.showOptions = false
+                               }) {
+                                   Image(systemName: "pencil")
+                                       .frame(width: 36,height:36)
+                                       .foregroundColor(.white)
+                                       .background(Color.black)
+                                       .clipShape(Circle())
+                               }
+                               Button(action: fetchDataFromServer){
+                                   Image(systemName: "mic.fill")
+                                       .frame(width: 36,height:36)
+                                       .foregroundColor(.white)
+                                       .background(Color.black)
+                                       .clipShape(Circle())
+                               }
+
+                           }
+                           .transition(.move(edge: .leading))  //Add transition effect
+                           .padding(.top,50)
+//                           .padding(.leading,30)
+                       }
+                       
+                       Spacer()
+
+                       VStack {
+                           Button(action: {
+                               self.showContent = false
+                               self.showOptions = false
+                           }) {
+                               Image(systemName: "xmark")
+                                   .frame(width:36,height:36)
+                                   .foregroundColor(.white)
+                                   .background(Color.black)
+                                   .clipShape(Circle())
+                           }
+                       }
+                       .padding(.top,50)
+                       .padding(.trailing,30)
+                   }
+
+                   
+                   ScrollView(.vertical,showsIndicators: false) {
+                       VStack {
+                           ForEach(self.MedData.MedList) { item in
+                               if !item.deleted{
+                                   MedCardView(index: item.id, backColor: $backColor)
+                                       .environmentObject(self.MedData)
+                                       .padding()
+                               }
+                           }
+                       }
+                   }
+                   .frame(width: screen.width)
+               }
+
+           }
+           .edgesIgnoringSafeArea(.all)
+       }
     private func makeScannerView()->ScannerView{
         ScannerView(completion: {
             textperPage in

@@ -56,6 +56,7 @@
 		FBF538292A7CE10700313139 /* ImageData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF538262A7CE10700313139 /* ImageData+CoreDataClass.swift */; };
 		FBF5382A2A7CE10700313139 /* DocuData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF538272A7CE10700313139 /* DocuData+CoreDataClass.swift */; };
 		FBF5382B2A7CE10800313139 /* ImageData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF538282A7CE10700313139 /* ImageData+CoreDataProperties.swift */; };
+		FBF5382D2A7CEB3400313139 /* SSTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF5382C2A7CEB3400313139 /* SSTView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,7 @@
 		FBF538262A7CE10700313139 /* ImageData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FBF538272A7CE10700313139 /* DocuData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DocuData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FBF538282A7CE10700313139 /* ImageData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FBF5382C2A7CEB3400313139 /* SSTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 				FB52B6062795249B004EF878 /* ToolsSecurityView.swift */,
 				FB52B6042795248E004EF878 /* ToolsView.swift */,
 				FB52B608279524A4004EF878 /* ScannerView.swift */,
+				FBF5382C2A7CEB3400313139 /* SSTView.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				FB52B61A27952515004EF878 /* Persistence.swift in Sources */,
 				FB52B61C27952546004EF878 /* EassySheetView.swift in Sources */,
 				FB52B5ED27952360004EF878 /* HomeView.swift in Sources */,
+				FBF5382D2A7CEB3400313139 /* SSTView.swift in Sources */,
 				FB52B5FE27952455004EF878 /* TipsView.swift in Sources */,
 				FB52B6252795261E004EF878 /* Image.swift in Sources */,
 				FB52B5F7279523CF004EF878 /* RingView.swift in Sources */,
@@ -545,6 +549,8 @@
 				INFOPLIST_FILE = "eDay2-1-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "启用相机权限进行文件扫描";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Allow FaceID to Entry";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Your app uses Microphone";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Your app uses speech recognition to transcribe speech into text.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -578,6 +584,8 @@
 				INFOPLIST_FILE = "eDay2-1-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "启用相机权限进行文件扫描";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Allow FaceID to Entry";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Your app uses Microphone";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Your app uses speech recognition to transcribe speech into text.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

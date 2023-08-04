@@ -8,28 +8,30 @@
 import SwiftUI
 
 
-func initConData()->ConTips{
-    //    var contips()
+func initConData()->ConTips {
     var output:[Conventional]=[]
     var finish:Int=0
     var tol:Int=1
     
-    if let dataStored =  UserDefaults.standard.object(forKey: "ConList0124X") as? Data{
-        let data=try! decoder.decode([Conventional].self, from: dataStored)
-        for item in data{
-            if !item.deleted{
-                let remainDays = calculateRemainDays(startDate: item.time, nowDate: Date.now)
-                let time:Date=abs(remainDays)==0 ? Date.now : item.time
-                let isPassed:Bool=remainDays<=0 ? true : false
-//                print("initTime=",gregorian_to_CN(date:item.initTime))
-                output.append(Conventional(id: output.count, name: item.name, remainDays: remainDays, initTime: item.initTime, time: time, lunarDp: item.lunarDp, isPassed: isPassed, deleted: item.deleted))
-                if(isPassed==true){
-                    finish+=1
+    if let dataStored = UserDefaults.standard.object(forKey: "ConList0124X") as? Data {
+        do {
+            let data = try decoder.decode([Conventional].self, from: dataStored)
+            for item in data {
+                if !item.deleted {
+                    let remainDays = calculateRemainDays(startDate: item.time, nowDate: Date.now)
+                    let time:Date = abs(remainDays)==0 ? Date.now : item.time
+                    let isPassed:Bool = remainDays <= 0 ? true : false
+                    output.append(Conventional(id: output.count, name: item.name, remainDays: remainDays, initTime: item.initTime, time: time, lunarDp: item.lunarDp, isPassed: isPassed, deleted: item.deleted))
+                    if(isPassed==true){
+                        finish += 1
+                    }
                 }
             }
+        } catch {
+            print("Failed to decode data: \(error)")
         }
     }
-    tol=(output.count==0 ? 1:output.count)
+    tol = (output.count==0 ? 1:output.count)
     print("Conventional=",output)
     return ConTips(data: output, finished: finish, tolcount: tol)
 }
@@ -65,8 +67,6 @@ struct TipsConventionalView: View {
                             .clipShape(Circle())
                             .onTapGesture {
                                 self.showContent=false
-                                //                        self.toggleShowContent()
-                                //                        print("X=",MedData.MedList[1].isChecked)
                             }
                     }
                     .padding()
@@ -142,11 +142,8 @@ struct TipsConventionalView_Previews: PreviewProvider {
 }
 
 struct ConventionalCardView: View {
-    
-    
     @EnvironmentObject var ConDate:ConTips
     var index:Int
-    
     
     @Binding var backColor:Color
     @State var showEdit = false
@@ -176,17 +173,14 @@ struct ConventionalCardView: View {
                     }
                     .padding()
                     
-                    
-                    
                     Spacer()
                     
-                    
-                    
                     HStack {
-                        if self.ConDate.ConList[index].lunarDp==false{
+                        if self.ConDate.ConList.count > index, self.ConDate.ConList[index].lunarDp==false{
                             Text("\(gregorian_to_CN(date:ConDate.ConList[index].initTime))")
                                 .font(.custom("", size: 15))
-                            .padding(.leading)}
+                            .padding(.leading)
+                        }
                         else{
                             Text("\(gregorian_to_lunar(date:ConDate.ConList[index].initTime))")
                                 .font(.custom("", size: 15))
@@ -202,22 +196,21 @@ struct ConventionalCardView: View {
                             .padding(.trailing,10)
                     }
                     
-                    
                     Spacer()
                     
                 }
             }
             .foregroundColor(.black)
             .sheet(isPresented: self.$showEdit, content: {
-                TipsConEditView(time: self.ConDate.ConList[index].initTime, isHidden:self.ConDate.ConList[index].lunarDp, backColor: $backColor, title: self.ConDate.ConList[index].name, id: self.ConDate.ConList[index].id)
-                    .environmentObject(self.ConDate)
+                if self.ConDate.ConList.count > index {
+                    TipsConEditView(time: self.ConDate.ConList[index].initTime, isHidden:self.ConDate.ConList[index].lunarDp, backColor: $backColor, title: self.ConDate.ConList[index].name, id: self.ConDate.ConList[index].id)
+                        .environmentObject(self.ConDate)
+                }
             })
-            
         }
         .frame(width:screen.width-20,height:150)
         .background(Color(#colorLiteral(red: 1, green: 0.5249271989, blue: 0.4519428015, alpha: 1)))
         .cornerRadius(10)
         .shadow(color:Color.black.opacity(10),radius: 3,x:0,y: 1)
-        
     }
 }

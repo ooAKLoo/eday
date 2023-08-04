@@ -259,29 +259,22 @@ class MedTips:ObservableObject{
 }
 
 //
-struct Medication:Identifiable,Codable{
-    
-    var id:Int
-    var name:String
-    var remain:Int=4
-    var time:[Date]
-    var dp1:Int
-    var dp2:Int
-    var dp3:Int
-    var dp4:Int
-    var expire1:Int=0
-    var expire2:Int=0
-    var expire3:Int=0
-    var expire4:Int=0
-    var frequ:Int
-    
-    //    var timeNum:Int
-    //    var logo:String
-    //    var image:Image
-    //    var color:Color
-    //    var fontColor:Color
-    var isChecked:Bool
-    var deleted:Bool
-    
-    var timeNum:Int
+struct Medication: Identifiable, Codable {
+    var id: Int
+    var name: String
+    var remain: Int = 4
+    var time: [Date]
+    var dp1: Int
+    var dp2: Int
+    var dp3: Int
+    var dp4: Int
+    var expire1: Int? = 0
+    var expire2: Int? = 0
+    var expire3: Int? = 0
+    var expire4: Int? = 0
+    var frequ: Int
+    var isChecked: Bool
+    var deleted: Bool
+    var timeNum: Int
 }
+

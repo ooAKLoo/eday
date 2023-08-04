@@ -15,6 +15,7 @@ struct HomeView: View {
     @Binding var showToolsContent: Bool
     @Binding var showToolsSecurityContent: Bool
     @Binding var showTipsConventional:Bool
+    @Binding var showAudioNote:Bool
     @Binding var backColor:Color
     var observation: NSKeyValueObservation?
     @ObservedObject var time: Time = Time()
@@ -117,7 +118,7 @@ struct HomeView: View {
                 
                 
                 HStack{
-                    Text("Tools")
+                    Text("AI Tools")
                         .font(.title).bold()
                     Spacer()
                 }
@@ -133,6 +134,10 @@ struct HomeView: View {
                                     .onTapGesture {
                                         if(item.title=="文字提取"){
                                             self.showToolsContent=true
+                                            self.backColor=item.color
+                                        }
+                                        if(item.title=="语音笔记"){
+                                            self.showAudioNote=true
                                             self.backColor=item.color
                                         }
                                         if(item.title=="保险箱"){
@@ -204,7 +209,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(showProfile: .constant(false),showContent: .constant(false),showToolsContent: .constant(false), showToolsSecurityContent: .constant(false), showTipsConventional: .constant(false), backColor: .constant(.white))
+        HomeView(showProfile: .constant(false),showContent: .constant(false),showToolsContent: .constant(false), showToolsSecurityContent: .constant(false), showTipsConventional: .constant(false),  showAudioNote: .constant(false), backColor: .constant(.white))
             .environmentObject(ConTips())
     }
 }
@@ -216,17 +221,10 @@ struct AvatarView: View {
     var body: some View {
         Button(action:{self.showProfile.toggle() }){
             Image("Logo")
-//                .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                 .frame(width: 36, height: 36)
                 .clipShape(Circle())
-            
-//                .resizable()
-//                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-//                .frame(width: 60, height: 60)
-//                .clipShape(Circle())
-//                .offset(y:-150)
             
             
         }
@@ -296,12 +294,12 @@ let sectionData=[
     Topical(title: "习", text: "Working", logo: "Logo1", image: Image("TipsStudy"), color: Color(#colorLiteral(red: 0.9768896699, green: 0.5988429189, blue: 0.5366133451, alpha: 1)), fontColor: .black),
     Topical(title: "药", text: "Medieation", logo: "Logo1", image: Image("TipsMed"), color: Color(#colorLiteral(red: 1, green: 0.7922440767, blue: 0.7701362967, alpha: 1)), fontColor: .black),
     Topical(title: "言", text: "Sentence", logo: "Logo1", image: Image("TipsSentence"), color: Color(#colorLiteral(red: 0.9996878505, green: 0.9310560822, blue: 0.9235754609, alpha: 1)), fontColor: .black),
-//    Section(title: "衣", text: "18 Section", logo: "Logo1", image: Image("Card5"), color: Color("card5")),
 ]
 
 let sectionDataTools=[
     Topical(title: "文字提取", text: "Scan", logo: "Tool", image: Image("ToolsScanning"), color: Color(#colorLiteral(red: 1, green: 0.9055414796, blue: 0.358527422, alpha: 1)), fontColor: .black),
     Topical(title: "保险箱", text: "Security", logo: "Tool", image: Image("ToolsSecurity"), color: Color(#colorLiteral(red: 0.8595539331, green: 0.9918276668, blue: 0.3957497478, alpha: 1)), fontColor: .black),
+    Topical(title: "语音笔记", text: "audio Note", logo: "Tool", image: Image("ToolsSecurity"), color: Color(#colorLiteral(red: 0.8595539331, green: 0.9918276668, blue: 0.3957497478, alpha: 1)), fontColor: .black),
     Topical(title: "吃", text: "eat what", logo: "Tool", image: Image("ToolsEat"), color: Color(#colorLiteral(red: 0.9473618865, green: 0.9692221284, blue: 0.230423063, alpha: 1)), fontColor: .black),
 ]
 
@@ -309,32 +307,5 @@ let sectionDataLife=[
     Topical(title: "读书", text: "books", logo: "Life", image: Image("LifeRead"), color: Color(#colorLiteral(red: 0.4942063689, green: 0.4816209078, blue: 0.7981173992, alpha: 1)), fontColor: .black),
     Topical(title: "音乐", text: "music", logo: "Life", image: Image("LifeMusic"), color: Color(#colorLiteral(red: 0.5033385158, green: 0.4719842076, blue: 1, alpha: 1)), fontColor: .black),
     Topical(title: "视频", text: "watching", logo: "Life", image: Image("LifeVideo"), color: Color(#colorLiteral(red: 0.5807858706, green: 0.7100253701, blue: 1, alpha: 1)), fontColor: .black),
-//    Topical(title: "日记", text: "memory", logo: "Life", image: Image("Card3"), color: Color("card1"), fontColor: .black),
-//    Topical(title: "流水", text: "expense", logo: "Life", image: Image("Card3"), color: Color(#colorLiteral(red: 0.9607843137, green: 0.9019607843, blue: 0.7921568627, alpha: 0.8470588235)), fontColor: .black),
 ]
 
-
-//
-//let sectionData=[
-//    Topical(title: "习", text: "Working", logo: "Logo1", image: Image(""), color: Color(#colorLiteral(red: 0.5764705882, green: 0.7098039216, blue: 0.7764705882, alpha: 0.8470588235)), fontColor: .black),
-//    Topical(title: "药", text: "Medieation", logo: "Logo1", image: Image(""), color: Color(#colorLiteral(red: 1, green: 0.8, blue: 0.8235294118, alpha: 1)), fontColor: .black),
-//    Topical(title: "言", text: "Sectence", logo: "Logo1", image: Image(""), color: Color(#colorLiteral(red: 1, green: 0.7490196078, blue: 0.5254901961, alpha: 0.8470588235)), fontColor: .black),
-//    Topical(title: "常", text: "Conventional", logo: "Logo1", image: Image(""), color: Color(#colorLiteral(red: 0.8941176471, green: 0.8470588235, blue: 0.862745098, alpha: 0.8470588235)), fontColor: .black),
-////    Section(title: "衣", text: "18 Section", logo: "Logo1", image: Image("Card5"), color: Color("card5")),
-//]
-//
-//let sectionDataTools=[
-//    Topical(title: "文字提取", text: "Scan", logo: "Logo1", image: Image(""), color: Color(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)), fontColor: .black),
-//    Topical(title: "保险箱", text: "Security", logo: "Logo1", image: Image(""), color: Color(#colorLiteral(red: 0.8688682914, green: 0.9196055532, blue: 0.9847239852, alpha: 1)), fontColor: .black),
-//    Topical(title: "吃", text: "eat what", logo: "Logo1", image: Image(""), color: Color(#colorLiteral(red: 0.9960784314, green: 0.5607843137, blue: 0.5607843137, alpha: 0.8470588235)), fontColor: .black),
-//]
-//
-//let sectionDataLife=[
-//    Topical(title: "读书", text: "books", logo: "Logo1", image: Image(""), color: Color(#colorLiteral(red: 1, green: 0.9333333333, blue: 0.8588235294, alpha: 0.8470588235)), fontColor: .black),
-//    Topical(title: "音乐", text: "music", logo: "Logo1", image: Image(""), color: Color("card3"), fontColor: .black),
-//    Topical(title: "视频", text: "watching", logo: "Logo1", image: Image(""), color: Color(#colorLiteral(red: 0.6392156863, green: 0.3411764706, blue: 0.03529411765, alpha: 0.8470588235)), fontColor: .black),
-//    Topical(title: "日记", text: "memory", logo: "Logo1", image: Image(""), color: Color("card1"), fontColor: .black),
-//    Topical(title: "流水", text: "expense", logo: "Logo1", image: Image(""), color: Color(#colorLiteral(red: 0.9607843137, green: 0.9019607843, blue: 0.7921568627, alpha: 0.8470588235)), fontColor: .black),
-//]
-//
-//
