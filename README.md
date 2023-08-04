@@ -1,5 +1,3 @@
-# Git
-
 # Git Commit Message Guidelines
 
 We've established these guidelines to ensure Git commit records are clear and orderly. All team members should follow them.
