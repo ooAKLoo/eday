@@ -56,7 +56,7 @@ struct Home: View {
                 Color.white.edgesIgnoringSafeArea(.all)
                 SSTView(backColor: $backColor, showSSTView: $showAudioNote) // 如果 SSTView 没有任何参数，这里就直接使用 ()
                 .transition(.move(edge: .bottom))
-                .animation(.spring(response: 0.1, dampingFraction: 0.9, blendDuration: 1))
+                .animation(.spring(response: 0.2, dampingFraction: 0.9, blendDuration: 1))
             }
 
             if authenticationManager.isAuthenticated{
