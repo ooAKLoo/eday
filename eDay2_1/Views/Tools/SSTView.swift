@@ -1,6 +1,9 @@
 import SwiftUI
 import Speech
 import AlertToast
+import OpenAI
+
+let openAI = OpenAI(apiToken: "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")
 
 struct SSTView: View {
     @Binding var backColor: Color
@@ -22,17 +25,6 @@ struct SSTView: View {
             .frame(width: screen.width)
         }
         .edgesIgnoringSafeArea(.all)
-        .toast(isPresenting: $isFormatting, duration: 0){
-
-                    // `.alert` is the default displayMode
-                    AlertToast(type: .regular, title: "Formatting")
-                    
-                    //Choose .hud to toast alert from the top of the screen
-                    //AlertToast(displayMode: .hud, type: .regular, title: "Message Sent!")
-                    
-                    //Choose .banner to slide/pop alert from the bottom of the screen
-                    //AlertToast(displayMode: .banner(.slide), type: .regular, title: "Message Sent!")
-        }
     }
     
     struct SSTTopView: View {
@@ -70,12 +62,12 @@ struct SSTView: View {
         @Binding var isFormatting: Bool
         @Binding var isRecording: Bool
         @State private var transcript = ""
+        @State private var isTranscriptPresenting = false
         @State private var audioEngine: AVAudioEngine!
         @State private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest!
         @State private var recognitionTask: SFSpeechRecognitionTask!
         @State private var englishSpeechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))!
         @State private var chineseSpeechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "zh-CN"))!
-        
         
         var body: some View {
             VStack {
@@ -101,7 +93,16 @@ struct SSTView: View {
                     Spacer()
                     
                     Button(isFormatting ? "Formatting" : "Format") {
-                        self.isFormatting ? self.stopFormatting() : self.startFormatting()
+                        if !self.isFormatting
+                        {
+                            Task {
+                                await startFormatting()
+                            }
+                        } else {
+                            Task {
+                                stopFormatting()
+                            }
+                        }
                     }.frame(maxWidth: .infinity, maxHeight: 40)
                         .background(Color.green)
                         .foregroundColor(.white)
@@ -112,6 +113,10 @@ struct SSTView: View {
             }
             .onAppear {
                 self.prepareRecording()
+            }.toast(isPresenting: $isFormatting, duration: 0){
+                AlertToast(type: .regular, title: "Formatting")
+            }.toast(isPresenting: $isTranscriptPresenting, duration: 2){
+                AlertToast(type: .regular, title: "No available string to format")
             }
         }
         
@@ -131,8 +136,36 @@ struct SSTView: View {
             }
         }
         
-        private func startFormatting() {
+        private func startFormatting() async {
+            if transcript.isEmpty {
+                print("here")
+                isTranscriptPresenting = true
+                return
+            }
+            let result: ChatResult
+            let prompt: String = "Please assist me in transforming the text provided below into a well-structured and logically coherent Markdown document with the following requirement\n---\n1. Your expertise will help in organizing the content to enhance readability and ensure a logical flow of information.\n2. By utilizing appropriate Markdown formatting, headings, lists, and other elements, I aim to create a document that clearly conveys the intended message and adheres to professional writing standards.\n3. Should the text given to you contains any illegitimate material, please respond with the string \"illegal\" with no other content\n---\nBelow is the Text Provided:\n---\n"
+
+            let combinedPrompt = "\(prompt)\(transcript)\n---\n"
+            let query = ChatQuery(model: .gpt3_5Turbo, messages: [.init(role: .user, content: combinedPrompt)])
+            let resultString: String?
+
             isFormatting = true
+            do {
+                result = try await openAI.chats(query: query)
+                // 处理结果
+                resultString = result.choices.first?.message.content
+                if let resultString = resultString, !resultString.elementsEqual("illegal") {
+                    print(resultString)
+                    transcript = resultString
+                } else {
+                    print("No response or illegal input")
+                }
+            } catch {
+                // 处理可能的错误
+                print("An error occurred: \(error)")
+            }
+            
+            isFormatting = false
         }
         
         private func stopFormatting() {
@@ -179,26 +212,30 @@ struct SSTView: View {
             }
             
             recognitionTask = recognizer.recognitionTask(with: recognitionRequest) { result, error in
-                func finalizeResult() {
+                guard error == nil else {
                     self.audioEngine.stop()
                     self.audioEngine.inputNode.removeTap(onBus: 0)
                     self.recognitionRequest = nil
                     self.recognitionTask = nil
-                }
-                
-                guard error == nil else {
-                    finalizeResult()
                     return
                 }
+                guard result != nil else {
+                    print("result is equal to nil")
+                    return
+                }
+                
+                guard let cur_result = result, !cur_result.bestTranscription.formattedString.isEmpty else {
+                    print("result is equal to empty string")
+                    return
+                }
+                
                 if let result = result {
                     self.transcript = result.bestTranscription.formattedString
                 }
-                
             }
             
             isRecording = true
         }
-        
         private func stopRecording() {
             print("Before stopping recording, transcript: \(transcript)") // 添加此行
             
