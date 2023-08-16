@@ -16,6 +16,7 @@ struct HomeView: View {
     @Binding var showToolsSecurityContent: Bool
     @Binding var showTipsConventional:Bool
     @Binding var showAudioNote:Bool
+    @Binding var showEat:Bool
     @Binding var backColor:Color
     var observation: NSKeyValueObservation?
     @ObservedObject var time: Time = Time()
@@ -140,6 +141,10 @@ struct HomeView: View {
                                             self.showAudioNote=true
                                             self.backColor=item.color
                                         }
+                                        if(item.title=="吃"){
+                                            self.showEat=true
+                                            self.backColor=item.color
+                                        }
                                         if(item.title=="保险箱"){
                                             self.backColor=item.color
                                             switch authenticationManager.biometryType{
@@ -209,7 +214,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(showProfile: .constant(false),showContent: .constant(false),showToolsContent: .constant(false), showToolsSecurityContent: .constant(false), showTipsConventional: .constant(false),  showAudioNote: .constant(false), backColor: .constant(.white))
+        HomeView(showProfile: .constant(false),showContent: .constant(false),showToolsContent: .constant(false), showToolsSecurityContent: .constant(false), showTipsConventional: .constant(false),  showAudioNote: .constant(false),showEat: .constant(false), backColor: .constant(.white))
             .environmentObject(ConTips())
     }
 }
