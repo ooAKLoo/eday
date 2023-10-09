@@ -47,6 +47,7 @@
 		FB59024D279E930B00711C70 /* Rattfiny-Script.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB590244279E930B00711C70 /* Rattfiny-Script.ttf */; };
 		FB590251279E930B00711C70 /* Toniya-Smith.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB590248279E930B00711C70 /* Toniya-Smith.ttf */; };
 		FB590254279E940500711C70 /* Creattion Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = FB590253279E940400711C70 /* Creattion Demo.otf */; };
+		FB73637A2AD389AD00F53A1E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB73637C2AD389AD00F53A1E /* Localizable.strings */; };
 		FBF538182A7CDD7B00313139 /* Malela.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBF538122A7CDD7B00313139 /* Malela.ttf */; };
 		FBF538192A7CDD7B00313139 /* Amy-Sauly.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBF538132A7CDD7B00313139 /* Amy-Sauly.ttf */; };
 		FBF5381A2A7CDD7B00313139 /* Rosther.otf in Resources */ = {isa = PBXBuildFile; fileRef = FBF538142A7CDD7B00313139 /* Rosther.otf */; };
@@ -107,6 +108,8 @@
 		FB590244279E930B00711C70 /* Rattfiny-Script.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rattfiny-Script.ttf"; sourceTree = "<group>"; };
 		FB590248279E930B00711C70 /* Toniya-Smith.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Toniya-Smith.ttf"; sourceTree = "<group>"; };
 		FB590253279E940400711C70 /* Creattion Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Creattion Demo.otf"; sourceTree = "<group>"; };
+		FB73637B2AD389AD00F53A1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FB73637F2AD38ADA00F53A1E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		FBF538122A7CDD7B00313139 /* Malela.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Malela.ttf; sourceTree = "<group>"; };
 		FBF538132A7CDD7B00313139 /* Amy-Sauly.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amy-Sauly.ttf"; sourceTree = "<group>"; };
 		FBF538142A7CDD7B00313139 /* Rosther.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rosther.otf; sourceTree = "<group>"; };
@@ -156,6 +159,7 @@
 		FB52B5D927952250004EF878 /* eDay2_1 */ = {
 			isa = PBXGroup;
 			children = (
+				FB7363702AD388E200F53A1E /* Language */,
 				FBF538252A7CE10700313139 /* CoreData */,
 				FB590236279E8D9900711C70 /* Resources */,
 				FB52B5DA27952250004EF878 /* eDay2_1App.swift */,
@@ -301,6 +305,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		FB7363702AD388E200F53A1E /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				FB73637C2AD389AD00F53A1E /* Localizable.strings */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
 		FBF538252A7CE10700313139 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +373,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = FB52B5CE27952250004EF878;
 			productRefGroup = FB52B5D827952250004EF878 /* Products */;
@@ -387,6 +400,7 @@
 				FB52B5E227952252004EF878 /* Preview Assets.xcassets in Resources */,
 				FB52B6352796886C004EF878 /* long.jpg in Resources */,
 				FB59024D279E930B00711C70 /* Rattfiny-Script.ttf in Resources */,
+				FB73637A2AD389AD00F53A1E /* Localizable.strings in Resources */,
 				FB590254279E940500711C70 /* Creattion Demo.otf in Resources */,
 				FB59024B279E930B00711C70 /* Tanya Hati.ttf in Resources */,
 				FB52B63B27969673004EF878 /* Assets.xcassets in Resources */,
@@ -446,11 +460,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		FB73637C2AD389AD00F53A1E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB73637B2AD389AD00F53A1E /* en */,
+				FB73637F2AD38ADA00F53A1E /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		FB52B5E327952252004EF878 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -512,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

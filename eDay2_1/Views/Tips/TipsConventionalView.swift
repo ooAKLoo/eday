@@ -56,7 +56,7 @@ struct TipsConventionalView: View {
                 
                 VStack(spacing:-20) {
                     HStack() {
-                        Text("总有一些日子值得记忆")
+                        Text(NSLocalizedString("memoryDays", comment: ""))
                             .font(.system(size: 20, weight: .bold))
                         //                        .fontWeight(20)
                         Spacer()

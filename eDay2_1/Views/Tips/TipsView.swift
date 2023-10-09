@@ -224,7 +224,7 @@ struct TipsView: View {
                         HStack {
                             Image(systemName: "pills.fill")
                                 .foregroundColor(backColor)
-                            Text("药品名称:")
+                            Text(NSLocalizedString("medicineNameTitle", comment: "Medicine Name Title"))
                                 .font(.headline)
                                .fontWeight(.heavy)
                                .foregroundColor(.black)
@@ -236,7 +236,7 @@ struct TipsView: View {
                             Image(systemName: "clock.fill")
                                 .foregroundColor(backColor)
                                 .offset(y:-5)
-                            Text("时间:")
+                            Text(NSLocalizedString("timeTitle", comment: "Time Title"))
                                 .font(.headline)
                                .fontWeight(.heavy)
                                .foregroundColor(.black)

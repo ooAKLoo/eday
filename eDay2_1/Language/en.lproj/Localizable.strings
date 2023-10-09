@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  eDay2_1
+
+  Created by 杨东举 on 2023/10/9.
+  
+*/
+
+"appTitle" = "eDay";
+"appDescription" = "Convenience in Life & Social Integration";
+"appFrom" = "From :)";
+"appFeatures" = "Set reminders, integrate social resources, and use tools to simplify your life.";
+"memoryDays" = "Rememberable Days";
+"eventNamePlaceholder" = "Event Name";
+"dateTitle" = "Date";
+"confirmButton" = "Confirm";
+"cancelButton" = "Cancel";
+"addTitle" = "Add";
+
+"gregorian" = "Solar";
+"lunar" = "Lunar";
+"medicineName" = "Medicine Name";
+"reminderTime" = "Reminder Time";
+"frequency" = "Frequency";
+"confirm" = "Confirm";
+"cancel" = "Cancel";
+"addTitle" = "Add";
+
+"everyDay" = "Every day";
+"everyWeek" = "Every week";
+"everyOtherDay" = "Every other day";
+"medicineNameTitle" = "Medicine Name:";
+"timeTitle" = "Time:";

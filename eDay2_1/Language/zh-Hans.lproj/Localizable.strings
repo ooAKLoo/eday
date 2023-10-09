@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  eDay2_1
+
+  Created by 杨东举 on 2023/10/9.
+  
+*/
+"appTitle" = "eDay";
+"appDescription" = "便捷生活 & 社交整合";
+"appFrom" = "From :)";
+"appFeatures" = "您可以在我们的app里设置提醒、整合社交资源并有许多工具用来方便您的生活 :)";
+
+"memoryDays" = "总有一些日子值得记忆";
+"eventNamePlaceholder" = "事件名称";
+"dateTitle" = "日期";
+"confirmButton" = "确认";
+"cancelButton" = "取消";
+"addTitle" = "添加";
+
+"gregorian" = "公历";
+"lunar" = "农历";
+"medicineName" = "药品名称";
+"reminderTime" = "提醒时间";
+"frequency" = "频率";
+"confirm" = "确认";
+"cancel" = "取消";
+"addTitle" = "添加";
+
+"everyDay" = "每天";
+"everyWeek" = "每周";
+"everyOtherDay" = "每隔一天";
+"medicineNameTitle" = "药品名称:";
+"timeTitle" = "时间:";
