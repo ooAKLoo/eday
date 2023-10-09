@@ -714,7 +714,6 @@ struct ShakeView: View {
     let dishes: [Dish] = [
         // 中国
         Dish(name: "炒饭", englishName: "Fried Rice", image: Image("chaofan")),
-        Dish(name: "拉面", englishName: "Ramen", image: Image("ramen")),
         Dish(name: "饺子", englishName: "Dumplings", image: Image("dumplings")),
         Dish(name: "粥", englishName: "Porridge", image: Image("porridge")),
         Dish(name: "面条", englishName: "Noodles", image: Image("noodles")),
@@ -723,14 +722,20 @@ struct ShakeView: View {
         // 日本
         Dish(name: "寿司", englishName: "Sushi", image: Image("sushi")),
         Dish(name: "乌冬面", englishName: "Udon", image: Image("udon")),
+        Dish(name: "拉面", englishName: "Ramen", image: Image("ramen")),
+        Dish(name: "味增汤", englishName: "Misoshiru", image: Image("misoshiru")),
         
         // 泰国
-        Dish(name: "泰国炒饭", englishName: "Thai Fried Rice", image: Image("thaifriedrice")),
+        Dish(name: "泰国猪肉饭", englishName: "Thai Pad Krapow", image: Image("padkrapow")),
         Dish(name: "绿咖喱", englishName: "Green Curry", image: Image("greencurry")),
+        Dish(name: "泰国椰子鸡汤", englishName: "Thai Coconot Chicken Soup", image: Image("coconutchickensoup")),
+        Dish(name: "冬阴功汤", englishName: "Tom Yum", image: Image("tomyum")),
         
         // 印度
         Dish(name: "咖喱鸡", englishName: "Chicken Curry", image: Image("chickencurry")),
         Dish(name: "印度烤饼", englishName: "Naan", image: Image("naan")),
+        Dish(name: "印度查特", englishName: "Chaat", image: Image("chaat")),
+        Dish(name: "印度玛撒拉香料卷饼", englishName: "Masala Dosa", image: Image("masaladosa")),
         
         // 法国
         Dish(name: "法式吐司", englishName: "French Toast", image: Image("frenchtoast")),
@@ -754,10 +759,14 @@ struct ShakeView: View {
         
         // 越南
         Dish(name: "河粉", englishName: "Pho", image: Image("pho")),
+        Dish(name: "越南鸡饭", englishName: "Vietnamese Chicken Rice", image: Image("vchickenrice")),
+        Dish(name: "越南包", englishName: "Vietnamese Pate Bread", image: Image("patebread")),
         
         // 韩国
         Dish(name: "泡菜", englishName: "Kimchi", image: Image("kimchi")),
         Dish(name: "石锅拌饭", englishName: "Bibimbap", image: Image("bibimbap")),
+        Dish(name: "辣豆腐汤", englishName: "Spicy Tofu Stew", image: Image("spicytofustew")),
+        Dish(name: "海鲜饼", englishName: "Seafood Pancake", image: Image("seafoodpancake")),
         
         // 俄罗斯
         Dish(name: "俄式馅饼", englishName: "Pirozhki", image: Image("pirozhki")),
