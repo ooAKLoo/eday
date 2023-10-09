@@ -67,16 +67,16 @@ struct CoverView: View {
     var body: some View {
         VStack {
             VStack(spacing:20) {
-                Text("eDay")
+                Text(NSLocalizedString("appTitle", comment: ""))
                     .font(.system(size: screen.width/5, weight:.bold))
                     .foregroundColor(.white)
                 
                 
-                Text("便捷生活 & 社交整合")
+                Text(NSLocalizedString("appDescription", comment: ""))
                     .font(.system(size: screen.width/10, weight:.bold))
                     .foregroundColor(.white)
                 
-                Text("From ooAKLoo")
+                Text(NSLocalizedString("appFrom", comment: ""))
                     .font(.system(size: screen.width/10, weight:.bold))
                     .foregroundColor(.white)
                 
@@ -86,7 +86,7 @@ struct CoverView: View {
             }
             .padding(.bottom,30)
             
-            Text("您可以在我们的app里设置提醒、整合社交资源并有许多工具用来方便您的生活 :)")
+            Text(NSLocalizedString("appFeatures", comment: ""))
                 .font(.subheadline)
                 .frame(width:250)
                 .offset(x:viewState.width/20,y:viewState.height/20)

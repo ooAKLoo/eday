@@ -30,7 +30,7 @@ func gregorian_to_lunar(date:Date) ->String{
 
            let formatter = DateFormatter()
 
-           formatter.locale = Locale(identifier: "zh_CN")
+           formatter.locale = Locale(identifier: "en_US")
 
            formatter.calendar = chinese
 
@@ -55,7 +55,7 @@ func gregorian_to_CN(date:Date) ->String{
 
            let formatter = DateFormatter()
 
-           formatter.locale = Locale(identifier: "zh_CN")
+           formatter.locale = Locale(identifier: "en_US")
 
 //           formatter.calendar = chinese
 
