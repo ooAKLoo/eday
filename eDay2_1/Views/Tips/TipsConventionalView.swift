@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-
+var globalOutputCount: Int = 0
 func initConData()->ConTips {
     var output:[Conventional]=[]
     var finish:Int=0
@@ -32,6 +32,7 @@ func initConData()->ConTips {
         }
     }
     tol = (output.count==0 ? 1:output.count)
+    globalOutputCount = output.count
     print("Conventional=",output)
     return ConTips(data: output, finished: finish, tolcount: tol)
 }
@@ -77,7 +78,7 @@ struct TipsConventionalView: View {
                                 .frame(width: 60, height: 60)
                         }
                         else{
-                            Text("\(self.ConData.tol)")
+                            Text("\(self.ConData.tol-1>0 ? self.ConData.tol : 1)")
                                 .font(.system(size: 58, weight: .bold))
                                 .frame(width: 60, height: 60)
                         }

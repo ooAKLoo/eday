@@ -128,7 +128,7 @@ extension Color {
 }
 
 
-func getRecipeForDish(dishName: String) {
+func getRecipeForDish123(dishName: String) {
 
     // If there are too few items in the fridge
     print("fridgeItems.count=",fridgeItems.count)
@@ -189,62 +189,62 @@ func getRecipeForDish(dishName: String) {
 
 }
 
-//func getRecipeForDish(dishName: String)  {
-//
-//    // If there are too few items in the fridge
-//    print("fridgeItems.count=",fridgeItems.count)
-//    if fridgeItems.count < 3 {
-//        sampleRecipe = Recipe(
-//            name: "Making Something Out of Nothing", // This is an attempt to capture the essence of "巧妇难为无米之炊" in English
-//            ingredients: fridgeItems,
-//            nutritionInfo: [
-//                Recipe.Nutrition(type: .protein, value: "Guesswork g"),
-//                Recipe.Nutrition(type: .calories, value: "Mystery kcal"),
-//                Recipe.Nutrition(type: .carbohydrates, value: "Surprise g"),
-//                Recipe.Nutrition(type: .fats, value: "Unknown g")
-//            ],
-//            steps: ["Contemplate the universe.", "Use your culinary wizardry.", "Serve with a side of imagination."]
-//        )
-//        return
-//    }
-//
-//    // If there are enough items, call ChatGPT API with a prompt
-//    let prompt = """
-//        Given the ingredients available in the fridge: \(fridgeItems.joined(separator: ", ")), please provide a detailed and practical recipe for \(dishName). Follow the precise format below:
-//
-//        {
-//            "Name": "EXACT_DISH_NAME",
-//            "Ingredients": ["Relevant Ingredient1 from the fridge", "Relevant Ingredient2 from the fridge", ...],
-//            "Nutrition Info": {
-//                "Protein": "Exact Amount in g",
-//                "Calories": "Exact Amount in kcal",
-//                "Carbohydrates": "Exact Amount in g",
-//                "Fats": "Exact Amount in g"
-//            },
-//            "Steps": ["Detailed step 1", "Detailed step 2", ...]
-//        }
-//
-//        Do NOT include irrelevant ingredients (e.g., do not include fruits like Oranges or Bananas in a Chicken Curry recipe). Exclude all additional commentary or context. Assume the availability of common condiments: salt, pepper, oil, and basic spices. Ensure each nutritional value includes its respective unit and that the recipe is sensible.
-//        """
-//
-//
-//
-//    let response = callChatGPTAPI(prompt: prompt)
-//
-//    print("response=",response)
-//    sampleRecipe = parseRecipe(response: response) ?? Recipe(
-//        name: "Unknown Recipe",
-//        ingredients: [],
-//        nutritionInfo: [],
-//        steps: ["Unknown steps."]
-//    )
-//
-//}
+func getRecipeForDish(dishName: String)  {
+
+    // If there are too few items in the fridge
+    print("fridgeItems.count=",fridgeItems.count)
+    if fridgeItems.count < 3 {
+        sampleRecipe = Recipe(
+            name: "Making Something Out of Nothing", // This is an attempt to capture the essence of "巧妇难为无米之炊" in English
+            ingredients: fridgeItems,
+            nutritionInfo: [
+                Recipe.Nutrition(type: .protein, value: "Guesswork g"),
+                Recipe.Nutrition(type: .calories, value: "Mystery kcal"),
+                Recipe.Nutrition(type: .carbohydrates, value: "Surprise g"),
+                Recipe.Nutrition(type: .fats, value: "Unknown g")
+            ],
+            steps: ["Contemplate the universe.", "Use your culinary wizardry.", "Serve with a side of imagination."]
+        )
+        return
+    }
+
+    // If there are enough items, call ChatGPT API with a prompt
+    let prompt = """
+        Given the ingredients available in the fridge: \(fridgeItems.joined(separator: ", ")), please provide a detailed and practical recipe for \(dishName). Follow the precise format below:
+
+        {
+            "Name": "EXACT_DISH_NAME",
+            "Ingredients": ["Relevant Ingredient1 from the fridge", "Relevant Ingredient2 from the fridge", ...],
+            "Nutrition Info": {
+                "Protein": "Exact Amount in g",
+                "Calories": "Exact Amount in kcal",
+                "Carbohydrates": "Exact Amount in g",
+                "Fats": "Exact Amount in g"
+            },
+            "Steps": ["Detailed step 1", "Detailed step 2", ...]
+        }
+
+        Do NOT include irrelevant ingredients (e.g., do not include fruits like Oranges or Bananas in a Chicken Curry recipe). Exclude all additional commentary or context. Assume the availability of common condiments: salt, pepper, oil, and basic spices. Ensure each nutritional value includes its respective unit and that the recipe is sensible.
+        """
+
+
+
+    let response = callChatGPTAPI(prompt: prompt)
+
+    print("response=",response)
+    sampleRecipe = parseRecipe(response: response) ?? Recipe(
+        name: "Unknown Recipe",
+        ingredients: [],
+        nutritionInfo: [],
+        steps: ["Unknown steps."]
+    )
+
+}
 
 func callChatGPTAPI(prompt: String) -> String {
-    let apiKey = "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"  // 请更换为您新的API密钥
-//    let url = URL(string: "https://api.openai.com/v1/engines/text-davinci-002/completions")!
-    let url = URL(string: "https://api.openai.com/v1/engines/gpt-3.5-turbo/completions")!
+    let apiKey = "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"  // 请更换为您新的API密钥
+    let url = URL(string: "https://api.openai.com/v1/engines/text-davinci-002/completions")!
+//    let url = URL(string: "https://api.openai.com/v1/engines/gpt-3.5-turbo/completions")!
 
     var request = URLRequest(url: url)
     request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
@@ -253,7 +253,7 @@ func callChatGPTAPI(prompt: String) -> String {
     
     let data = [
         "prompt": prompt,
-        "max_tokens": 300  // 或其他您想设置的值
+        "max_tokens": 600  // 或其他您想设置的值
     ] as [String : Any]
     
     do {
@@ -273,7 +273,6 @@ func callChatGPTAPI(prompt: String) -> String {
             semaphore.signal()
             return
         }
-        
         guard let data = data, let jsonResponse = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any], let text = jsonResponse["choices"] as? [[String: Any]], let firstChoice = text.first, let finalText = firstChoice["text"] as? String else {
             print("Error in parsing response")
             semaphore.signal()
@@ -422,7 +421,7 @@ struct CameraPicker: UIViewControllerRepresentable {
 class ImageAnalyzerViewModel: ObservableObject {
     @Published var detectedFood: String?
 
-    func analyzeImage(_ image: UIImage) {
+    func analyzeImage123(_ image: UIImage) {
         print("Image analysis started.")
 
         // Convert UIImage to Data
@@ -461,7 +460,6 @@ class ImageAnalyzerViewModel: ObservableObject {
                         if let detectedLabels = jsonResponse["detected_food"] as? [String] {
                             print("Successfully received response from the backend server.")
                             print("Detected Labels: \(detectedLabels.joined(separator: ", "))")
-                            
                             // Add detected labels to fridgeItems
                             DispatchQueue.main.async {
                                 for label in detectedLabels {
@@ -479,6 +477,22 @@ class ImageAnalyzerViewModel: ObservableObject {
                     }
                 }.resume()
             }
+    }
+    
+    func analyzeImage(_ image: UIImage) {
+        let defaultDetectedLabels = ["Banana", "Lemon", "Fish", "Beef", "Corn", "Broccoli", "Tomato", "Avocado", "Beans","Eggs"]
+
+        print("Using default labels without making backend request.")
+        
+        // 模拟3秒的网络延迟
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            for label in defaultDetectedLabels {
+                if !fridgeItems.contains(label) {
+                    fridgeItems.append(label)
+                    print("New item added from default values: \(label)")
+                }
+            }
+        }
     }
 
 }

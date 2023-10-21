@@ -31,3 +31,12 @@
 "everyOtherDay" = "每隔一天";
 "medicineNameTitle" = "药品名称:";
 "timeTitle" = "时间:";
+
+
+"Notification.subtitle" = "要按时吃药哦 :)";
+
+
+"EassySheetView.文本名称" = "Text Name";
+"EassySheetView.文本内容" = "Text Content";
+"EassySheetView.确认" = "Confirm";
+"EassySheetView.取消" = "Cancel";

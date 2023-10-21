@@ -204,7 +204,7 @@ struct HomeView: View {
                 Spacer()
             }
             .padding(.horizontal)
-            .padding(.top,30)
+            .padding(.top,40)
         .edgesIgnoringSafeArea(.all)
         }
        .padding(-20)

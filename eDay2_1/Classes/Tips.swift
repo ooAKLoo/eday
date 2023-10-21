@@ -195,7 +195,9 @@ class MedTips:ObservableObject{
     func sendNotification_preDay(name:String,time:Date,freq:Int){
 //        print("每一天")
         Notific.title=name
-        Notific.subtitle="要按时吃药哦 :)"
+//        Notific.subtitle="要按时吃药哦 :)"
+        Notific.subtitle="Remember to take your medicine on time :)"
+//        Notific.subtitle="Today is Bob's birthday :)"
         Notific.sound=UNNotificationSound.default
         var date = DateComponents()
         date.hour = Int(modiferDateToStr_hh(time: time))

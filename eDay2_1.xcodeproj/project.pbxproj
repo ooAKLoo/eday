@@ -600,10 +600,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"eDay2_1/Preview Content\"";
-				DEVELOPMENT_TEAM = B294FRDLWV;
+				DEVELOPMENT_TEAM = 4S557R3MD5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "eDay2-1-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = eDay;
 				INFOPLIST_KEY_NSCameraUsageDescription = "启用相机权限进行文件扫描";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Allow FaceID to Entry";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location for nearby restaurants";
@@ -638,10 +639,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"eDay2_1/Preview Content\"";
-				DEVELOPMENT_TEAM = B294FRDLWV;
+				DEVELOPMENT_TEAM = 4S557R3MD5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "eDay2-1-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = eDay;
 				INFOPLIST_KEY_NSCameraUsageDescription = "启用相机权限进行文件扫描";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Allow FaceID to Entry";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location for nearby restaurants";
