@@ -1,4 +1,6 @@
-<!-- vscode-markdown-toc -->
+# eDay Guideliness
+
+### Table of contents
 * 1. [Deployment Tutorial](#DeploymentTutorial)
 	* 1.1. [Install IDE](#InstallIDE)
 	* 1.2. [Import Project](#ImportProject)
@@ -18,11 +20,8 @@
 * 3. [Pull Request Process](#PullRequestProcess)
 * 4. [Git Merge Process](#GitMergeProcess)
 
-<!-- vscode-markdown-toc-config
-	numbering=true
-	autoSave=true
-	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc -->##  1. <a name='DeploymentTutorial'></a>Deployment Tutorial
+##  1. <a name='DeploymentTutorial'></a>Deployment Tutorial
+
 
 ###  1.1. <a name='InstallIDE'></a>Install IDE
 
