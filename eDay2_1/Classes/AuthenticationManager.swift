@@ -8,6 +8,7 @@
 import Foundation
 import LocalAuthentication
 
+/// A manager responsible for handling biometric authentication.
 class AuthenicationManager:ObservableObject{
     private(set) var context = LAContext()
     @Published private(set) var biometryType:LABiometryType = .none
@@ -16,15 +17,20 @@ class AuthenicationManager:ObservableObject{
     @Published private(set) var errorDescription:String?
     @Published var showAlert=false
     
+    /// Initializes the manager and determines the type of biometry available.
     init(){
         getBiometryType()
     }
-    
+
+    /// Retrieves the type of biometry available on the device and updates `canEvaluatePolicy` and `biometryType`.
     func getBiometryType(){
         canEvaluatePolicy=context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
         biometryType=context.biometryType
     }
     
+    /// Authenticates the user using available biometrics.
+    /// If successful, sets `isAuthenticated` to true.
+    /// In case of failure, updates `errorDescription`, shows an alert, and resets `biometryType` to `.none`.
     func authenticateWithBiometrics() async{
         context=LAContext()
         
@@ -52,6 +58,7 @@ class AuthenicationManager:ObservableObject{
        }
     }
     
+    /// Logs out the user by setting `isAuthenticated` to false.
     func authenticateOut(){
         self.isAuthenticated=false
     }

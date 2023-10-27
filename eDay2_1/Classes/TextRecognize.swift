@@ -9,12 +9,15 @@ import Foundation
 import Vision
 import VisionKit
 
+/// A class responsible for recognizing text from images captured using the document camera.
 final class TextRecognizer{
     let camernScan:VNDocumentCameraScan
     init(cameraScan:VNDocumentCameraScan){
         self.camernScan=cameraScan
     }
     private let queue = DispatchQueue(label: "scan-codes",qos: .default,attributes: [],autoreleaseFrequency: .workItem)
+    
+    /// - Parameter completionHandler: A closure to handle the recognized text. This closure receives an array of strings, with each string corresponding to the recognized text on a page.
     func recognizeText(withCompletionHandler completionHandler:@escaping ([String])->Void){
         queue.async {
             let images=(0..<self.camernScan.pageCount).compactMap({

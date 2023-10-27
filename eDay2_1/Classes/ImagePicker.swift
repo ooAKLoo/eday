@@ -8,7 +8,9 @@
 import SwiftUI
 import UIKit
 
+/// A SwiftUI wrapper around the UIKit's UIImagePickerController to allow image selection within a SwiftUI view.
 struct ImagePicker: UIViewControllerRepresentable{
+    /// Creates a coordinator object that communicates changes between the `ImagePicker` and the `UIImagePickerController`.
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
@@ -20,6 +22,7 @@ struct ImagePicker: UIViewControllerRepresentable{
     @Environment(\.presentationMode) private var presentionMode
     var sourceType:UIImagePickerController.SourceType = .photoLibrary
     
+    /// Creates and returns an image picker view controller.
     func makeUIViewController(context:UIViewControllerRepresentableContext<ImagePicker>) ->
         UIImagePickerController{
             let imagePicker = UIImagePickerController()
@@ -30,10 +33,12 @@ struct ImagePicker: UIViewControllerRepresentable{
             return imagePicker
     }
     
+    /// Updates the view controller's state to match the SwiftUI view's properties.
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         
     }
     
+    /// A coordinator to manage the communication and data flow between the `ImagePicker` and the `UIImagePickerController`.
     final class Coordinator:NSObject,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
         var parent:ImagePicker
         
@@ -41,6 +46,7 @@ struct ImagePicker: UIViewControllerRepresentable{
             self.parent = parent
         }
         
+        /// Handles the selection of an image from the picker.
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
                 parent.selectedImage = image

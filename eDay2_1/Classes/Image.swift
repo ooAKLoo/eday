@@ -36,7 +36,7 @@ var Imagedecoder=JSONDecoder()
 //    }
 //}
 
-
+/// Defines the layout types for displaying images.
 enum LayoutType:CaseIterable{
     case single
     case double

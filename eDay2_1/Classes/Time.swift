@@ -7,6 +7,8 @@
 import UIKit
 import SwiftUI
 
+
+/// A class responsible for managing and formatting time-related data.
 class Time:ObservableObject{
 //    @Published var day:CGFloat
    @Published var hour:CGFloat
@@ -25,6 +27,7 @@ class Time:ObservableObject{
     }
 }
 
+/// Converts a Gregorian date to its Lunar calendar representation.
 func gregorian_to_lunar(date:Date) ->String{
     let chinese = Calendar(identifier: .chinese)
 
@@ -72,6 +75,7 @@ func gregorian_to_CN(date:Date) ->String{
 
 }
 
+/// Calculates the remaining days between two dates.
 func calculateRemainDays(startDate:Date,nowDate:Date)->Int{
     let formatter = DateFormatter()
     let calendar = Calendar.current
@@ -92,6 +96,7 @@ func calculateRemainDays(startDate:Date,nowDate:Date)->Int{
     return remainDays%yearDays
 }
 
+/// Function to convert a string time into its corresponding Date object.
 func modiferDateToStr(time:Date)->String{
     let dateformatter = DateFormatter()
     dateformatter.dateFormat = "HH:mm"
@@ -174,6 +179,7 @@ func timeInterval(date:Date)->Int{
     return seconds
 }
 
+/// SwiftUI wrapper for UIKit's UIDatePicker, customized for specific use.
 struct MyDatePicker: UIViewRepresentable {
     
     @Binding var selection: Date
@@ -222,6 +228,7 @@ struct MyDatePicker: UIViewRepresentable {
     }
 }
 
+/// Another customized SwiftUI wrapper for UIKit's UIDatePicker, tailored for picking dates with Lunar calendar consideration.
 struct TipsConDatePicker: UIViewRepresentable {
     
     

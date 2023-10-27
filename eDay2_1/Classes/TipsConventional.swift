@@ -7,6 +7,8 @@
 
 import Foundation
 
+// The class is designed to manage a list of conventional items.
+// It uses the ObservableObject protocol, indicating it can be observed by SwiftUI views for changes.
 class ConTips:ObservableObject{
     @Published var ConList:[Conventional]
     @Published var tol:Int
@@ -37,7 +39,7 @@ class ConTips:ObservableObject{
         self.store()
     }
 
-    
+    // Function to add a new conventional item.
     func add(data:Conventional){
         self.tol+=1
         let remainDays = calculateRemainDays(startDate: data.time, nowDate: Date.now)
@@ -56,7 +58,7 @@ class ConTips:ObservableObject{
     
 
     
-        
+    // Function to edit an existing conventional item by ID.
     func edit(id:Int,data:Conventional){
 //        print("edit",modiferDateToStr_date_hm(time: data.time),"data=",data)
         self.ConList[id].name=data.name
@@ -68,6 +70,8 @@ class ConTips:ObservableObject{
         self.store()
         
 }
+
+    // Calculates the number of items that have passed.
     func calculateIspassed(){
         self.Passed=0
         for item in ConList{
@@ -76,6 +80,8 @@ class ConTips:ObservableObject{
             }
         }
     }
+
+    // Marks an item as deleted by ID.
     func conDelete(id:Int){
         self.tol-=1
         self.ConList[id].deleted=true
@@ -84,8 +90,7 @@ class ConTips:ObservableObject{
     }
     
     
-    
-    
+    // Saves the list of conventional items (likely to UserDefaults based on the implementation).
     func store(){
         let dataStored=try! encoder.encode(self.ConList)
         UserDefaults.standard.set(dataStored, forKey: "ConList0124X")
@@ -93,7 +98,7 @@ class ConTips:ObservableObject{
     }
 }
 
-
+// Data structure representing a conventional item.
 struct Conventional:Identifiable,Codable{
     
     var id:Int

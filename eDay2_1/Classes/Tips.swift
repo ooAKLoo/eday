@@ -15,7 +15,7 @@ var decoder=JSONDecoder()
 
 let Notific=UNMutableNotificationContent()
 
-
+// The main class that handles medication tips and related functionalities.
 class MedTips:ObservableObject{
     @Published var MedList:[Medication]
     @Published var tol:Int
@@ -36,6 +36,8 @@ class MedTips:ObservableObject{
             count+=1
         }
     }
+
+    // This function toggles the isChecked property of a medication and adjusts the finished count.
     func finish(id:Int){
         
         //        print("finishInfo1=",self.MedList[id])
@@ -50,6 +52,7 @@ class MedTips:ObservableObject{
         self.store()
     }
     
+    // This function adds a new medication to MedList.
     func add(data:Medication){
 //        return
         if data.timeNum<1{
@@ -261,6 +264,7 @@ class MedTips:ObservableObject{
 }
 
 //
+// Struct to represent a single Medication with its properties.
 struct Medication: Identifiable, Codable {
     var id: Int
     var name: String
