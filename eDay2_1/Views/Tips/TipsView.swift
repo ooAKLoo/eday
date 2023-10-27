@@ -2,7 +2,7 @@
 //  TipsView.swift
 //  eDay
 //
-//  Created by 杨东举 on 2022/1/7.
+//.
 //
  import SwiftUI
  func initMedData()->(Int,Int,[Medication]){

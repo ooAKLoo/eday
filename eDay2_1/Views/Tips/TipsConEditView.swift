@@ -2,7 +2,7 @@
 //  TipsConEditView.swift
 //  eDay2_1
 //
-//  Created by 杨东举 on 2022/1/24.
+//.
 //
 
 import Foundation
@@ -12,7 +12,7 @@ import Foundation
 //  TipsEditView.swift
 //  eDay
 //
-//  Created by 杨东举 on 2022/1/7.
+//.
 //
 
 import SwiftUI

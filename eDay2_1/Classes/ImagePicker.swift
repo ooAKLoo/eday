@@ -2,7 +2,7 @@
 //  ImagePicker.swift
 //  eDay6
 //
-//  Created by 杨东举 on 2022/1/11.
+//.
 //
 
 import SwiftUI

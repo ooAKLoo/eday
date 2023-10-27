@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F61BED792A8A0F4800C515C0 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = F61BED782A8A0F4800C515C0 /* AlertToast */; };
+		F61BED7C2A8A260A00C515C0 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = F61BED7B2A8A260A00C515C0 /* OpenAISwift */; };
+		F61BED7F2A8A449A00C515C0 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = F61BED7E2A8A449A00C515C0 /* OpenAI */; };
 		FB52B5DB27952250004EF878 /* eDay2_1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52B5DA27952250004EF878 /* eDay2_1App.swift */; };
 		FB52B5DD27952250004EF878 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52B5DC27952250004EF878 /* ContentView.swift */; };
 		FB52B5E227952252004EF878 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB52B5E127952252004EF878 /* Preview Assets.xcassets */; };
@@ -132,6 +135,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F61BED7C2A8A260A00C515C0 /* OpenAISwift in Frameworks */,
+				F61BED7F2A8A449A00C515C0 /* OpenAI in Frameworks */,
+				F61BED792A8A0F4800C515C0 /* AlertToast in Frameworks */,
 				FBF5383A2A84C63A00313139 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +353,11 @@
 			dependencies = (
 			);
 			name = eDay2_1;
+			packageProductDependencies = (
+				F61BED782A8A0F4800C515C0 /* AlertToast */,
+				F61BED7B2A8A260A00C515C0 /* OpenAISwift */,
+				F61BED7E2A8A449A00C515C0 /* OpenAI */,
+			);
 			productName = eDay2_1;
 			productReference = FB52B5D727952250004EF878 /* eDay2_1.app */;
 			productType = "com.apple.product-type.application";
@@ -367,7 +378,7 @@
 				};
 			};
 			buildConfigurationList = FB52B5D227952250004EF878 /* Build configuration list for PBXProject "eDay2_1" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -376,6 +387,11 @@
 				"zh-Hans",
 			);
 			mainGroup = FB52B5CE27952250004EF878;
+			packageReferences = (
+				F61BED772A8A0F4800C515C0 /* XCRemoteSwiftPackageReference "AlertToast" */,
+				F61BED7A2A8A260A00C515C0 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+				F61BED7D2A8A449A00C515C0 /* XCRemoteSwiftPackageReference "OpenAI" */,
+			);
 			productRefGroup = FB52B5D827952250004EF878 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -600,7 +616,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"eDay2_1/Preview Content\"";
-				DEVELOPMENT_TEAM = 4S557R3MD5;
+				DEVELOPMENT_TEAM = 3QS9RPHH73;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "eDay2-1-Info.plist";
@@ -639,7 +655,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"eDay2_1/Preview Content\"";
-				DEVELOPMENT_TEAM = 4S557R3MD5;
+				DEVELOPMENT_TEAM = 3QS9RPHH73;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "eDay2-1-Info.plist";
@@ -691,6 +707,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F61BED772A8A0F4800C515C0 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		F61BED7A2A8A260A00C515C0 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		F61BED7D2A8A449A00C515C0 /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F61BED782A8A0F4800C515C0 /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F61BED772A8A0F4800C515C0 /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
+		F61BED7B2A8A260A00C515C0 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F61BED7A2A8A260A00C515C0 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+		F61BED7E2A8A449A00C515C0 /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F61BED7D2A8A449A00C515C0 /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		FB52B613279524F2004EF878 /* Image.xcdatamodeld */ = {
