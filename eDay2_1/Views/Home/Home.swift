@@ -15,15 +15,17 @@ struct Home: View {
     @State var showToolsSecurityContent = false
     @State var showTipsConventional = false
     @State var showAudioNote = false
+    @State var showEat = false
     @State var backColor = Color(.white)
-    
+    @State private var dragAmount = CGSize.zero
+
     @ObservedObject var ConData :ConTips = initConData()
     
     @StateObject var authenticationManager = AuthenicationManager()
     var body: some View {
         ZStack {
            
-            HomeView(showProfile:$showProfile, showContent: $showTipsContent,showToolsContent: $showToolsContent, showToolsSecurityContent: $showToolsSecurityContent ,showTipsConventional: $showTipsConventional,showAudioNote: $showAudioNote, backColor: $backColor)
+            HomeView(showProfile:$showProfile, showContent: $showTipsContent,showToolsContent: $showToolsContent, showToolsSecurityContent: $showToolsSecurityContent ,showTipsConventional: $showTipsConventional,showAudioNote: $showAudioNote,showEat: $showEat, backColor: $backColor)
                 .environmentObject(ConData)
                 .environmentObject(authenticationManager)
 //                .environmentObject(ConData)
@@ -58,6 +60,31 @@ struct Home: View {
                 .transition(.move(edge: .bottom))
                 .animation(.spring(response: 0.2, dampingFraction: 0.9, blendDuration: 1))
             }
+            if showEat {
+                Color.white.edgesIgnoringSafeArea(.all)
+                VStack {
+                       ShakeView(onDismiss: {
+                           self.showEat.toggle()  // 关闭 showEat 视图
+                       })
+                   }
+                .padding(.vertical) // Apply padding here
+                .transition(.move(edge: .bottom))
+                .animation(.spring(response: 0.1, dampingFraction: 0.9, blendDuration: 1))
+                .offset(x: dragAmount.width, y: 0)
+                .animation(.interactiveSpring())
+                .gesture(
+                    DragGesture()
+                        .onChanged { self.dragAmount = $0.translation }
+                        .onEnded { value in
+                            if self.dragAmount.width > 150 {  // 滑动超过150像素才关闭
+                                self.showEat.toggle()
+                            }
+                            self.dragAmount = .zero
+                        }
+                )
+            }
+
+
 
             if authenticationManager.isAuthenticated{
                 Color.white.edgesIgnoringSafeArea(.all)
@@ -70,7 +97,7 @@ struct Home: View {
             }
         .padding(.top,screen.width/10)
         .padding(.leading,0)
-//        .frame(width: screen.width)
+        .frame(width: screen.width)
             
     }
 }

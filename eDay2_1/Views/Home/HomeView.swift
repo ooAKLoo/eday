@@ -16,6 +16,7 @@ struct HomeView: View {
     @Binding var showToolsSecurityContent: Bool
     @Binding var showTipsConventional:Bool
     @Binding var showAudioNote:Bool
+    @Binding var showEat:Bool
     @Binding var backColor:Color
     var observation: NSKeyValueObservation?
     @ObservedObject var time: Time = Time()
@@ -140,6 +141,10 @@ struct HomeView: View {
                                             self.showAudioNote=true
                                             self.backColor=item.color
                                         }
+                                        if(item.title=="吃"){
+                                            self.showEat=true
+                                            self.backColor=item.color
+                                        }
                                         if(item.title=="保险箱"){
                                             self.backColor=item.color
                                             switch authenticationManager.biometryType{
@@ -199,7 +204,7 @@ struct HomeView: View {
                 Spacer()
             }
             .padding(.horizontal)
-            .padding(.top,30)
+            .padding(.top,40)
         .edgesIgnoringSafeArea(.all)
         }
        .padding(-20)
@@ -209,7 +214,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(showProfile: .constant(false),showContent: .constant(false),showToolsContent: .constant(false), showToolsSecurityContent: .constant(false), showTipsConventional: .constant(false),  showAudioNote: .constant(false), backColor: .constant(.white))
+        HomeView(showProfile: .constant(false),showContent: .constant(false),showToolsContent: .constant(false), showToolsSecurityContent: .constant(false), showTipsConventional: .constant(false),  showAudioNote: .constant(false),showEat: .constant(false), backColor: .constant(.white))
             .environmentObject(ConTips())
     }
 }
@@ -296,12 +301,13 @@ let sectionData=[
     Topical(title: "言", text: "Sentence", logo: "Logo1", image: Image("TipsSentence"), color: Color(#colorLiteral(red: 0.9996878505, green: 0.9310560822, blue: 0.9235754609, alpha: 1)), fontColor: .black),
 ]
 
-let sectionDataTools=[
-    Topical(title: "文字提取", text: "Scan", logo: "Tool", image: Image("ToolsScanning"), color: Color(#colorLiteral(red: 1, green: 0.9055414796, blue: 0.358527422, alpha: 1)), fontColor: .black),
-    Topical(title: "保险箱", text: "Security", logo: "Tool", image: Image("ToolsSecurity"), color: Color(#colorLiteral(red: 0.8595539331, green: 0.9918276668, blue: 0.3957497478, alpha: 1)), fontColor: .black),
-    Topical(title: "语音笔记", text: "audio Note", logo: "Tool", image: Image("ToolsSecurity"), color: Color(#colorLiteral(red: 0.8595539331, green: 0.9918276668, blue: 0.3957497478, alpha: 1)), fontColor: .black),
-    Topical(title: "吃", text: "eat what", logo: "Tool", image: Image("ToolsEat"), color: Color(#colorLiteral(red: 0.9473618865, green: 0.9692221284, blue: 0.230423063, alpha: 1)), fontColor: .black),
+let sectionDataTools = [
+    Topical(title: "文字提取", text: "Scan", logo: "Tool", image: Image("ToolsScanning"), color: Color(#colorLiteral(red: 0.95, green: 0.74, blue: 0.71, alpha: 1)), fontColor: .black), // Pastel Coral
+    Topical(title: "保险箱", text: "Security", logo: "Tool", image: Image("ToolsSecurity"), color: Color(#colorLiteral(red: 0.69, green: 0.88, blue: 0.9, alpha: 1)), fontColor: .black),   // Pastel Blue
+    Topical(title: "语音笔记", text: "Audio Note", logo: "Tool", image: Image("ToolAudio"), color: Color(#colorLiteral(red: 0.85, green: 0.81, blue: 0.89, alpha: 1)), fontColor: .black), // Pastel Purple
+    Topical(title: "吃", text: "Eat What", logo: "Tool", image: Image("ToolsEat"), color: Color(#colorLiteral(red: 0.79, green: 0.92, blue: 0.77, alpha: 1)), fontColor: .black)         // Pastel Green
 ]
+
 
 let sectionDataLife=[
     Topical(title: "读书", text: "books", logo: "Life", image: Image("LifeRead"), color: Color(#colorLiteral(red: 0.4942063689, green: 0.4816209078, blue: 0.7981173992, alpha: 1)), fontColor: .black),

@@ -1,0 +1,41 @@
+/* 
+  Localizable.strings
+  eDay2_1
+
+  Created by 杨东举 on 2023/10/9.
+  
+*/
+
+"appTitle" = "eDay";
+"appDescription" = "Convenience in Life & Social Integration";
+"appFrom" = "From :)";
+"appFeatures" = "Set reminders, integrate social resources, and use tools to simplify your life.";
+"memoryDays" = "Rememberable Days";
+"eventNamePlaceholder" = "Event Name";
+"dateTitle" = "Date";
+"confirmButton" = "Confirm";
+"cancelButton" = "Cancel";
+"addTitle" = "Add";
+
+"gregorian" = "Solar";
+"lunar" = "Lunar";
+"medicineName" = "Medicine Name";
+"reminderTime" = "Reminder Time";
+"frequency" = "Frequency";
+"confirm" = "Confirm";
+"cancel" = "Cancel";
+"addTitle" = "Add";
+
+"everyDay" = "Every day";
+"everyWeek" = "Every week";
+"everyOtherDay" = "Every other day";
+"medicineNameTitle" = "Medicine Name:";
+"timeTitle" = "Time:";
+
+"Notification.subtitle" = "Remember to take your medicine on time :)";
+
+
+"EassySheetView.文本名称" = "Text Name";
+"EassySheetView.文本内容" = "Text Content";
+"EassySheetView.确认" = "Confirm";
+"EassySheetView.取消" = "Cancel";

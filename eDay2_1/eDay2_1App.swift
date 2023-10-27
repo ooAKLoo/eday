@@ -8,6 +8,7 @@
 import SwiftUI
 import UserNotifications
 
+/// Main application structure, which defines the startup logic and interface of the application
 @main
 struct eDay2_1App: App {
     var body: some Scene {

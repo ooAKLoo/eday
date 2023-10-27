@@ -27,9 +27,9 @@ struct MedTipsEditView: View {
     @State var isHidden:Bool=false
     
     private let frequs = [
-        ("每天", "circle.grid.cross.fill"),
-        ("每周", "circle.grid.cross.up.fill"),
-        ("每隔一天", "circle.grid.cross.down.fill"),
+        (NSLocalizedString("everyDay", comment: "Every day"), "circle.grid.cross.fill"),
+        (NSLocalizedString("everyWeek", comment: "Every week"), "circle.grid.cross.up.fill"),
+        (NSLocalizedString("everyOtherDay", comment: "Every other day"), "circle.grid.cross.down.fill"),
     ]
     
     @State  var selectedFreque:Int = 0
@@ -54,14 +54,16 @@ struct MedTipsEditView: View {
                         HStack {
                             Image(systemName: "cross.case")
                                 .foregroundColor(self.backColor)
-                            TextField("药品名称", text: self.$title)
+                            TextField(NSLocalizedString("medicineName", comment: "Medicine Name Placeholder"), text: self.$title)
+
                         }
                         VStack {
                             HStack {
                                 Image(systemName: "alarm")
                                     .foregroundColor(self.backColor)
                                 //                                Spacer()
-                                Text("提醒时间")
+                                Text(NSLocalizedString("reminderTime", comment: "Reminder Time"))
+
                                 Spacer()
                                 Button(action:{
                                     if !timeLimit{
@@ -137,7 +139,8 @@ struct MedTipsEditView: View {
                         HStack {
                             Image(systemName: "repeat")
                                 .foregroundColor(self.backColor)
-                            Picker(selection: $selectedFreque, label: Text("频率")) {
+                            Picker(selection: $selectedFreque, label: Text(NSLocalizedString("frequency", comment: "Frequency Picker"))) {
+
                                 ForEach(0 ..< frequs.count) {
                                     Label(frequs[$0].0, systemImage: frequs[$0].1)
                                         .foregroundColor(.black)
@@ -160,21 +163,21 @@ struct MedTipsEditView: View {
                             }
                             self.presentation.wrappedValue.dismiss()
                         }){
-                            Text("确认")
-                                .foregroundColor(.black)
+                            Text(NSLocalizedString("confirm", comment: "Confirm Button"))
+                                    .foregroundColor(.black)
                             
                         }
                         Button(action:{
                             self.presentation.wrappedValue.dismiss()
                         }){
-                            Text("取消")
-                                .foregroundColor(.black)
+                            Text(NSLocalizedString("cancel", comment: "Cancel Button"))
+                                    .foregroundColor(.black)
                         }
                         
                         
                     }
                 }
-                .navigationTitle("添加")
+                .navigationTitle(NSLocalizedString("addTitle", comment: ""))
             }
             Spacer()
         }

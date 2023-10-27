@@ -18,6 +18,38 @@
             endingLineNumber = "59"
             landmarkName = "SSTEditorView"
             landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "9CE74D4D-8813-4C18-B5E4-6DB66590ADEC - 35c730dfe9f8d441"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "eDay2_1.SSTView.SSTEditorView.init(showSSTView: SwiftUI.Binding&lt;Swift.Bool&gt;, screen: SwiftUI.Binding&lt;__C.CGRect&gt;, selectedLanguage: SwiftUI.Binding&lt;Swift.Int&gt;) -&gt; eDay2_1.SSTView.SSTEditorView"
+                  moduleName = "eDay2_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericwhite/Documents/Subjects/mobile/eday/eDay2_1/Views/Tools/SSTView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "209">
+               </Location>
+               <Location
+                  uuid = "9CE74D4D-8813-4C18-B5E4-6DB66590ADEC - 2d5269d32f08550a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of eDay2_1.SSTView.SSTEditorView.isRecording : Swift.Bool"
+                  moduleName = "eDay2_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericwhite/Documents/Subjects/mobile/eday/eDay2_1/Views/Tools/SSTView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "15">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

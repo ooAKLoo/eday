@@ -48,14 +48,14 @@ struct TipsConEditView: View {
                         HStack {
                             Image(systemName: "rectangle.and.paperclip")
                                 .foregroundColor(self.backColor)
-                            TextField("事件名称", text: self.$title)
+                            TextField(NSLocalizedString("eventNamePlaceholder", comment: ""), text: self.$title)
                         }
                         
                         VStack (alignment: .leading, spacing: 0){
                             HStack {
                                 Image(systemName: "person.badge.clock")
                                     .foregroundColor(self.backColor)
-                                Text("日期")
+                                Text(NSLocalizedString("dateTitle", comment: ""))
                                 Spacer()
                                 ConToggleView(backColor: $backColor, isHidden: $isHidden)
                                 
@@ -64,13 +64,6 @@ struct TipsConEditView: View {
                                 .padding(.trailing,110)
                         }.frame(height: 100)
                     }
-                    
-                    
-                    
-                    
-                  
-                    
-                    
                     
                     Section{
                         Button(action:{
@@ -82,21 +75,21 @@ struct TipsConEditView: View {
                             }
                             self.presentation.wrappedValue.dismiss()
                         }){
-                            Text("确认")
+                            Text(NSLocalizedString("confirmButton", comment: ""))
                                 .foregroundColor(.black)
                             
                         }
                         Button(action:{
                             self.presentation.wrappedValue.dismiss()
                         }){
-                            Text("取消")
+                            Text(NSLocalizedString("cancelButton", comment: ""))
                                 .foregroundColor(.black)
                         }
                         
                         
                     }
                 }
-                .navigationTitle("添加")
+                .navigationTitle(NSLocalizedString("addTitle", comment: ""))
             }
             Spacer()
         }
@@ -121,7 +114,8 @@ struct ConToggleView: View {
                 
                 if isHidden{
                     Spacer()
-                    Text("农历").foregroundColor(Color(#colorLiteral(red: 0.4568658471, green: 0.8275114298, blue: 0.9175289273, alpha: 1)))
+                    Text(NSLocalizedString("lunar", comment: "Lunar Calendar"))
+.foregroundColor(Color(#colorLiteral(red: 0.4568658471, green: 0.8275114298, blue: 0.9175289273, alpha: 1)))
                     
                 }
                 ZStack{
@@ -136,7 +130,8 @@ struct ConToggleView: View {
                     self.isHidden.toggle()
                 }
                 if !isHidden{
-                    Text("公历")
+                    Text(NSLocalizedString("gregorian", comment: "Gregorian Calendar"))
+
                         .foregroundColor(Color(#colorLiteral(red: 0.4568658471, green: 0.8275114298, blue: 0.9175289273, alpha: 1)))
                     Spacer()
                 }

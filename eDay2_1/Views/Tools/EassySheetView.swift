@@ -24,12 +24,14 @@ struct EassySheetView: View {
                     Section{
                             HStack {
                                 Image(systemName: "textformat.size")
-                                TextField("文本名称", text: self.$title)
+                                TextField(NSLocalizedString("EassySheetView.文本名称", comment: "Text Name"), text: self.$title)
+
                             }
                         VStack {
                             HStack {
                                     Image(systemName: "doc.plaintext")
-                                    Text("文本内容")
+                                Text(NSLocalizedString("EassySheetView.文本内容", comment: "Text Content"))
+
                                     Spacer()
                             }
                         
@@ -48,21 +50,18 @@ struct EassySheetView: View {
                             }
                             self.presentation.wrappedValue.dismiss()
                         }){
-                            Text("确认")
+                            Text(NSLocalizedString("EassySheetView.确认", comment: "Confirm"))
+                                .foregroundColor(.black)
                                 .foregroundColor(.black)
                         }
                         Button(action:{
                             self.presentation.wrappedValue.dismiss()
                         }){
-                        Text("取消")
+                            Text(NSLocalizedString("EassySheetView.取消", comment: "Cancel"))
                                 .foregroundColor(.black)
                         }
                     }
                 }
-//                TextField("文本名称", text: self.$title)
-//                TextEditor(text: $content)
-//                    .background(.black)
-//                    .padding()
                     
                 
             }

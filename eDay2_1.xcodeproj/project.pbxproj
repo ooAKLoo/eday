@@ -50,6 +50,7 @@
 		FB59024D279E930B00711C70 /* Rattfiny-Script.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB590244279E930B00711C70 /* Rattfiny-Script.ttf */; };
 		FB590251279E930B00711C70 /* Toniya-Smith.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB590248279E930B00711C70 /* Toniya-Smith.ttf */; };
 		FB590254279E940500711C70 /* Creattion Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = FB590253279E940400711C70 /* Creattion Demo.otf */; };
+		FB73637A2AD389AD00F53A1E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB73637C2AD389AD00F53A1E /* Localizable.strings */; };
 		FBF538182A7CDD7B00313139 /* Malela.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBF538122A7CDD7B00313139 /* Malela.ttf */; };
 		FBF538192A7CDD7B00313139 /* Amy-Sauly.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBF538132A7CDD7B00313139 /* Amy-Sauly.ttf */; };
 		FBF5381A2A7CDD7B00313139 /* Rosther.otf in Resources */ = {isa = PBXBuildFile; fileRef = FBF538142A7CDD7B00313139 /* Rosther.otf */; };
@@ -60,6 +61,11 @@
 		FBF5382A2A7CE10700313139 /* DocuData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF538272A7CE10700313139 /* DocuData+CoreDataClass.swift */; };
 		FBF5382B2A7CE10800313139 /* ImageData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF538282A7CE10700313139 /* ImageData+CoreDataProperties.swift */; };
 		FBF5382D2A7CEB3400313139 /* SSTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF5382C2A7CEB3400313139 /* SSTView.swift */; };
+		FBF538312A83968A00313139 /* EatShakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF538302A83968A00313139 /* EatShakeView.swift */; };
+		FBF538332A83A3DB00313139 /* eat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBF538322A83A3DB00313139 /* eat.mp3 */; };
+		FBF538352A84AA9200313139 /* NearbyRestaurantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF538342A84AA9200313139 /* NearbyRestaurantsView.swift */; };
+		FBF538372A84AE3300313139 /* RecipeNutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF538362A84AE3300313139 /* RecipeNutritionView.swift */; };
+		FBF5383A2A84C63A00313139 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF538392A84C63A00313139 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +111,8 @@
 		FB590244279E930B00711C70 /* Rattfiny-Script.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rattfiny-Script.ttf"; sourceTree = "<group>"; };
 		FB590248279E930B00711C70 /* Toniya-Smith.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Toniya-Smith.ttf"; sourceTree = "<group>"; };
 		FB590253279E940400711C70 /* Creattion Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Creattion Demo.otf"; sourceTree = "<group>"; };
+		FB73637B2AD389AD00F53A1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FB73637F2AD38ADA00F53A1E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		FBF538122A7CDD7B00313139 /* Malela.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Malela.ttf; sourceTree = "<group>"; };
 		FBF538132A7CDD7B00313139 /* Amy-Sauly.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amy-Sauly.ttf"; sourceTree = "<group>"; };
 		FBF538142A7CDD7B00313139 /* Rosther.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rosther.otf; sourceTree = "<group>"; };
@@ -115,6 +123,11 @@
 		FBF538272A7CE10700313139 /* DocuData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DocuData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FBF538282A7CE10700313139 /* ImageData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FBF5382C2A7CEB3400313139 /* SSTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTView.swift; sourceTree = "<group>"; };
+		FBF538302A83968A00313139 /* EatShakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatShakeView.swift; sourceTree = "<group>"; };
+		FBF538322A83A3DB00313139 /* eat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = eat.mp3; sourceTree = "<group>"; };
+		FBF538342A84AA9200313139 /* NearbyRestaurantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyRestaurantsView.swift; sourceTree = "<group>"; };
+		FBF538362A84AE3300313139 /* RecipeNutritionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeNutritionView.swift; sourceTree = "<group>"; };
+		FBF538392A84C63A00313139 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +138,7 @@
 				F61BED7C2A8A260A00C515C0 /* OpenAISwift in Frameworks */,
 				F61BED7F2A8A449A00C515C0 /* OpenAI in Frameworks */,
 				F61BED792A8A0F4800C515C0 /* AlertToast in Frameworks */,
+				FBF5383A2A84C63A00313139 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +150,7 @@
 			children = (
 				FB52B5D927952250004EF878 /* eDay2_1 */,
 				FB52B5D827952250004EF878 /* Products */,
+				FBF538382A84C63A00313139 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +165,7 @@
 		FB52B5D927952250004EF878 /* eDay2_1 */ = {
 			isa = PBXGroup;
 			children = (
+				FB7363702AD388E200F53A1E /* Language */,
 				FBF538252A7CE10700313139 /* CoreData */,
 				FB590236279E8D9900711C70 /* Resources */,
 				FB52B5DA27952250004EF878 /* eDay2_1App.swift */,
@@ -235,7 +251,9 @@
 		FB52B60327952487004EF878 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				FBF538322A83A3DB00313139 /* eat.mp3 */,
 				FB52B62127952594004EF878 /* ImageSingleView.swift */,
+				FBF538362A84AE3300313139 /* RecipeNutritionView.swift */,
 				FB52B61F27952579004EF878 /* DisplayImage.swift */,
 				FB52B610279524DC004EF878 /* Eassy.swift */,
 				FB52B61B27952546004EF878 /* EassySheetView.swift */,
@@ -245,6 +263,8 @@
 				FB52B6042795248E004EF878 /* ToolsView.swift */,
 				FB52B608279524A4004EF878 /* ScannerView.swift */,
 				FBF5382C2A7CEB3400313139 /* SSTView.swift */,
+				FBF538342A84AA9200313139 /* NearbyRestaurantsView.swift */,
+				FBF538302A83968A00313139 /* EatShakeView.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -291,6 +311,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		FB7363702AD388E200F53A1E /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				FB73637C2AD389AD00F53A1E /* Localizable.strings */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
 		FBF538252A7CE10700313139 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +327,14 @@
 				FBF538282A7CE10700313139 /* ImageData+CoreDataProperties.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		FBF538382A84C63A00313139 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBF538392A84C63A00313139 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +384,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = FB52B5CE27952250004EF878;
 			packageReferences = (
@@ -370,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBF538182A7CDD7B00313139 /* Malela.ttf in Resources */,
+				FBF538332A83A3DB00313139 /* eat.mp3 in Resources */,
 				FBF538192A7CDD7B00313139 /* Amy-Sauly.ttf in Resources */,
 				FBF5381A2A7CDD7B00313139 /* Rosther.otf in Resources */,
 				FBF5381B2A7CDD7B00313139 /* LoveSaturnDemoRegular.ttf in Resources */,
@@ -378,6 +416,7 @@
 				FB52B5E227952252004EF878 /* Preview Assets.xcassets in Resources */,
 				FB52B6352796886C004EF878 /* long.jpg in Resources */,
 				FB59024D279E930B00711C70 /* Rattfiny-Script.ttf in Resources */,
+				FB73637A2AD389AD00F53A1E /* Localizable.strings in Resources */,
 				FB590254279E940500711C70 /* Creattion Demo.otf in Resources */,
 				FB59024B279E930B00711C70 /* Tanya Hati.ttf in Resources */,
 				FB52B63B27969673004EF878 /* Assets.xcassets in Resources */,
@@ -392,8 +431,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBF538352A84AA9200313139 /* NearbyRestaurantsView.swift in Sources */,
 				FBF5382B2A7CE10800313139 /* ImageData+CoreDataProperties.swift in Sources */,
 				FB52B6002795246B004EF878 /* Scandata.swift in Sources */,
+				FBF538372A84AE3300313139 /* RecipeNutritionView.swift in Sources */,
 				FBF5382A2A7CE10700313139 /* DocuData+CoreDataClass.swift in Sources */,
 				FB59022F279E592700711C70 /* TipsConventional.swift in Sources */,
 				FB52B60D279524B6004EF878 /* TextRecognize.swift in Sources */,
@@ -413,6 +454,7 @@
 				FB59022D279D780D00711C70 /* NotificationDelegate.swift in Sources */,
 				FB52B60B279524B2004EF878 /* ToolsSecurityImageView.swift in Sources */,
 				FBF538292A7CE10700313139 /* ImageData+CoreDataClass.swift in Sources */,
+				FBF538312A83968A00313139 /* EatShakeView.swift in Sources */,
 				FB52B5F5279523B6004EF878 /* Time.swift in Sources */,
 				FB52B611279524DC004EF878 /* Eassy.swift in Sources */,
 				FB52B60227952483004EF878 /* MedTipsEditView.swift in Sources */,
@@ -434,11 +476,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		FB73637C2AD389AD00F53A1E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB73637B2AD389AD00F53A1E /* en */,
+				FB73637F2AD38ADA00F53A1E /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		FB52B5E327952252004EF878 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -500,6 +555,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -556,6 +612,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"eDay2_1/Preview Content\"";
@@ -563,8 +620,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "eDay2-1-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = eDay;
 				INFOPLIST_KEY_NSCameraUsageDescription = "启用相机权限进行文件扫描";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Allow FaceID to Entry";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location for nearby restaurants";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Your app uses Microphone";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Your app uses speech recognition to transcribe speech into text.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -578,8 +637,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.edu.jlu.csw.davidgu.eDay2-1";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.unimelb.csw.Dongju.eDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -591,6 +651,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"eDay2_1/Preview Content\"";
@@ -598,8 +659,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "eDay2-1-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = eDay;
 				INFOPLIST_KEY_NSCameraUsageDescription = "启用相机权限进行文件扫描";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Allow FaceID to Entry";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location for nearby restaurants";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Your app uses Microphone";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Your app uses speech recognition to transcribe speech into text.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -613,8 +676,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.edu.jlu.csw.davidgu.eDay2-1";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.unimelb.csw.Dongju.eDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
