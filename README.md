@@ -1,6 +1,30 @@
-# 1. Deployment Tutorial
+<!-- vscode-markdown-toc -->
+* 1. [Deployment Tutorial](#DeploymentTutorial)
+	* 1.1. [Install IDE](#InstallIDE)
+	* 1.2. [Import Project](#ImportProject)
+	* 1.3. [Install IOS SDK Version](#InstallIOSSDKVersion)
+	* 1.4. [Run Project](#RunProject)
+	* 1.5. [Git Operation](#GitOperation)
+		* 1.5.1. [Pull](#Pull)
+		* 1.5.2. [Stage](#Stage)
+		* 1.5.3. [Commmit](#Commmit)
+		* 1.5.4. [Push](#Push)
+		* 1.5.5. [Outcome](#Outcome)
+* 2. [Git Commit Message Guidelines](#GitCommitMessageGuidelines)
+	* 2.1. [Commit Message Structure](#CommitMessageStructure)
+		* 2.1.1. [Type](#Type)
+		* 2.1.2. [Subject](#Subject)
+		* 2.1.3. [Body](#Body)
+* 3. [Pull Request Process](#PullRequestProcess)
+* 4. [Git Merge Process](#GitMergeProcess)
 
-## 1.1 Install IDE
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->##  1. <a name='DeploymentTutorial'></a>Deployment Tutorial
+
+###  1.1. <a name='InstallIDE'></a>Install IDE
 
 We recommend installing Xcode for the development and deployment of this iOS project. Here's why:
 
@@ -12,13 +36,13 @@ We recommend installing Xcode for the development and deployment of this iOS pro
 
 To get started, [download Xcode from the Mac App Store](https://apps.apple.com/us/app/xcode/id497799835).
 
-## 1.2 Import Project
+###  1.2. <a name='ImportProject'></a>Import Project
 ![copyURL](ReadmePic/projectURL.png)
 ![ImportProject](ReadmePic/projectImport02.png)
 
 After intalling Xcode, Clone Project Git Repository.
 
-## 1.3 Install IOS SDK Version
+###  1.3. <a name='InstallIOSSDKVersion'></a>Install IOS SDK Version
 ![iosInstall](ReadmePic/iosInstall.png)
 
 1. In the top toolbar of Xcode, you'll see a dropdown menu displaying the currently selected iOS SDK version. For instance, the image shows "iOS 17.0 Not Installed".
@@ -28,49 +52,49 @@ After intalling Xcode, Clone Project Git Repository.
 3. Click the "GET" button to download and install the necessary iOS SDK version.
 
 
-## 1.4 Run Project
+###  1.4. <a name='RunProject'></a>Run Project
 ![projectRun](ReadmePic/projectRun.png)
 
 When we install IOS SDK successfully, we can run now!
 
-## 1.5 Git Operation
+###  1.5. <a name='GitOperation'></a>Git Operation
 
-### 1.5.1 Pull
+####  1.5.1. <a name='Pull'></a>Pull
 ![projectPull](ReadmePic/pull.png) 
 
 Before you begin developing, ensure that your local project is up-to-date with the version on GitHub. This ensures that you are working with the most recent changes and reduces the risk of conflicts.
 
-### 1.5.2 Stage
+####  1.5.2. <a name='Stage'></a>Stage
 ![projectSatge](ReadmePic/stage01.png) 
 ![projectSatge](ReadmePic/stage02.png) 
 
 After making changes to your code, you'll need to stage these changes before committing. 
 
-### 1.5.3 Commmit
+####  1.5.3. <a name='Commmit'></a>Commmit
 ![projectCommit](ReadmePic/commit01.png) 
 ![projectCommit](ReadmePic/commit02.png) 
 
 Once you've staged your changes, you must implement the content of commit, please check the [commit message rule](#2-git-commit-message-guidelines).
 
-### 1.5.4 Push
+####  1.5.4. <a name='Push'></a>Push
 ![projectPush](ReadmePic/push.png)
 
 After committing, you can push your changes to the GitHub repository.
 - You can click the yellow "U" button to push.
 - You can also push by clicking "Integrate" dropdown menu to push.
 
-### 1.5.5 Outcome
+####  1.5.5. <a name='Outcome'></a>Outcome
 ![outcome](ReadmePic/outcome.png)
 
 Now we can check the outcome on Github.
 Enjoy it!
 
 
-# 2. Git Commit Message Guidelines
+##  2. <a name='GitCommitMessageGuidelines'></a>Git Commit Message Guidelines
 
 We've established these guidelines to ensure Git commit records are clear and orderly. All team members should follow them.
 
-## 2.1 Commit Message Structure
+###  2.1. <a name='CommitMessageStructure'></a>Commit Message Structure
 
 Each commit message should have a header and a body. The header should be brief and clear, not exceeding 50 characters. The body provides a detailed description of changes and can span multiple lines, each under 72 characters.
 
@@ -87,7 +111,7 @@ eg:
 feat: Enhanced Audio Notes UI & Improved Bilingual Support
 1. Refined the UI of the Audio Notes feature for better user experience and clarity.
 2. Optimized animation displays within the Audio Notes feature, providing smoother visual transitions.
-### Type
+####  2.1.1. <a name='Type'></a>Type
 
 Commit types include:
 
@@ -101,7 +125,7 @@ Commit types include:
 
 If `type` is `feat` or `fix`, the commit appears in the Change log. For other types, it's your decision to include them in the Change log.
 
-### Subject
+####  2.1.2. <a name='Subject'></a>Subject
 
 `<subject>` is a brief change description, under 50 characters.
 
@@ -111,7 +135,7 @@ Rules:
 - Begin with a lowercase letter
 - Don't end with a period
 
-### Body
+####  2.1.3. <a name='Body'></a>Body
 
 `<body>` is a detailed change description and can span multiple lines.
 
@@ -120,12 +144,12 @@ Rules:
 - Use the first person present tense, e.g., `change`, not `changed` or `changes`
 - Explain the reason for the code changes and compare with the previous behavior
 
-# 3. Pull Request Process
+##  3. <a name='PullRequestProcess'></a>Pull Request Process
 
 1. Submit a Pull Request to the main repository on GitHub.
 2. After code review, your changes are accepted and merged into the main repository.
 
-# 4. Git Merge Process
+##  4. <a name='GitMergeProcess'></a>Git Merge Process
 
 To merge code from the remote `dev_ydj` branch into the remote `main` branch, follow these steps:
 
