@@ -2,7 +2,7 @@
 //  ToolsView.swift
 //  EditText
 //
-//  Created by 杨东举 on 2022/1/10.
+//.
 //
 
 import SwiftUI

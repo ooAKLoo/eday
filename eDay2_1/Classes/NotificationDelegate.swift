@@ -2,7 +2,7 @@
 //  NotificationDelegate.swift
 //  eDay2_1
 //
-//  Created by 杨东举 on 2022/1/23.
+//.
 //
 
 import SwiftUI

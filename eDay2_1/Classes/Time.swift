@@ -2,7 +2,7 @@
 //  Time.swift
 //  eDay
 //
-//  Created by 杨东举 on 2022/1/6.
+//.
 //
 import UIKit
 import SwiftUI

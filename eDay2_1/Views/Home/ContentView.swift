@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  eDay2_1
 //
-//  Created by 杨东举 on 2022/1/17.
+//.
 //
 
 import SwiftUI
